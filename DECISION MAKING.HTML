@@ -1,0 +1,1168 @@
+<HTML>
+<HEAD>
+<TITLE>
+NIELIT
+</TITLE>
+
+<SCRIPT LANGUAGE="VBSCRIPT">
+
+SUB I1_ONMOUSEOVER()
+	DOCUMENT.I1.SRC="OUTPUT2.JPG"
+END SUB
+SUB I1_ONMOUSEOUT()
+	DOCUMENT.I1.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I2_ONMOUSEOVER()
+	DOCUMENT.I2.SRC="OUTPUT2.JPG"
+END SUB
+SUB I2_ONMOUSEOUT()
+	DOCUMENT.I2.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I3_ONMOUSEOVER()
+	DOCUMENT.I3.SRC="OUTPUT2.JPG"
+END SUB
+SUB I3_ONMOUSEOUT()
+	DOCUMENT.I3.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I4_ONMOUSEOVER()
+	DOCUMENT.I4.SRC="OUTPUT2.JPG"
+END SUB
+SUB I4_ONMOUSEOUT()
+	DOCUMENT.I4.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I5_ONMOUSEOVER()
+	DOCUMENT.I5.SRC="OUTPUT2.JPG"
+END SUB
+SUB I5_ONMOUSEOUT()
+	DOCUMENT.I5.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I6_ONMOUSEOVER()
+	DOCUMENT.I6.SRC="OUTPUT2.JPG"
+END SUB
+SUB I6_ONMOUSEOUT()
+	DOCUMENT.I6.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I7_ONMOUSEOVER()
+	DOCUMENT.I7.SRC="OUTPUT2.JPG"
+END SUB
+SUB I7_ONMOUSEOUT()
+	DOCUMENT.I7.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I8_ONMOUSEOVER()
+	DOCUMENT.I8.SRC="OUTPUT2.JPG"
+END SUB
+SUB I8_ONMOUSEOUT()
+	DOCUMENT.I8.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I9_ONMOUSEOVER()
+	DOCUMENT.I9.SRC="OUTPUT2.JPG"
+END SUB
+SUB I9_ONMOUSEOUT()
+	DOCUMENT.I9.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I10_ONMOUSEOVER()
+	DOCUMENT.I10.SRC="OUTPUT2.JPG"
+END SUB
+SUB I10_ONMOUSEOUT()
+	DOCUMENT.I10.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I11_ONMOUSEOVER()
+	DOCUMENT.I11.SRC="OUTPUT2.JPG"
+END SUB
+SUB I11_ONMOUSEOUT()
+	DOCUMENT.I11.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I12_ONMOUSEOVER()
+	DOCUMENT.I12.SRC="OUTPUT2.JPG"
+END SUB
+SUB I12_ONMOUSEOUT()
+	DOCUMENT.I12.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I13_ONMOUSEOVER()
+	DOCUMENT.I13.SRC="OUTPUT2.JPG"
+END SUB
+SUB I13_ONMOUSEOUT()
+	DOCUMENT.I13.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I14_ONMOUSEOVER()
+	DOCUMENT.I14.SRC="OUTPUT2.JPG"
+END SUB
+SUB I14_ONMOUSEOUT()
+	DOCUMENT.I14.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I15_ONMOUSEOVER()
+	DOCUMENT.I15.SRC="OUTPUT2.JPG"
+END SUB
+SUB I15_ONMOUSEOUT()
+	DOCUMENT.I15.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I16_ONMOUSEOVER()
+	DOCUMENT.I16.SRC="OUTPUT2.JPG"
+END SUB
+SUB I16_ONMOUSEOUT()
+	DOCUMENT.I16.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I17_ONMOUSEOVER()
+	DOCUMENT.I17.SRC="OUTPUT2.JPG"
+END SUB
+SUB I17_ONMOUSEOUT()
+	DOCUMENT.I17.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I18_ONMOUSEOVER()
+	DOCUMENT.I18.SRC="OUTPUT2.JPG"
+END SUB
+SUB I18_ONMOUSEOUT()
+	DOCUMENT.I18.SRC="OUTPUT.JPG"
+END SUB
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="BLACK" TEXT="WHITE">
+
+<CENTER>
+<H1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<U><B>
+DECISION MAKING
+</B></U>
+</FONT>
+</H1>
+</CENTER>
+
+<B>
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q1)</U>	C PROGRAM TO CALCULATE DISCOUNT. DISCOUNT OFFERED IS 16% FOR PURCHASE MORE THAN Rs.10,000
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+float a,dis,bill;
+clrscr();
+printf("enter your bill amount Rs.");
+scanf("%f",&a);
+if (a>=10000)
+{
+	printf("your discount is ");
+	dis=(a*16)/100;
+	bill=a-((a*16)/100);
+	printf("%f",dis);
+	printf("\nyour total bill is Rs.%f",bill);
+}
+else
+{
+	printf("no discount is offered for purchase under rs.10000\nyour total bill is Rs.%f",a);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="DISCOUNT.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I1">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q2)</U>	C PROGRAM TO CHECK WHETHER A PERSON IS ELIGIBLE FOR VOTING OR NOT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a;
+clrscr();
+printf("THIS IS A PROGRAM TO CHECK WHEATHER THE PERSON IS ELIGIBLE FOR VOTING OR NOT\n\nEnter Your Age ");
+scanf("%d",&a);
+if (a>=18)
+{
+	printf("You are Eligible to Vote");
+}
+else
+{
+	printf("You are Not Eligible to Vote");
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="VOTING.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I2">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q3)</U>	C PROGRAM TO CHECK GIVEN NUMBER IS EVEN OR ODD
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a,b;
+clrscr();
+printf("THIS IS A PROGRAM TO FIND OUT WHEATHER THE GIVEN NO IS EVEN OR ODD NO");
+scanf("%d",&a);
+if(a%2==0)
+{
+printf("even");
+}
+else
+{
+printf("odd");
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="EVEN_ODD.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I3">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q4)</U>	C PROGRAM TO CALCULATE PROFIT AND LOSS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int sp,cp,result;
+clrscr();
+printf("THIS IS A PROGRAM TO CALCULATE PROFIT AND LOSS\n\nEnter Selling Price ");
+scanf("%d",&sp);
+printf("Enter Cost Price ");
+scanf("%d",&cp);
+if (sp==cp)
+{
+	printf("No Profit, No Loss");
+}
+else if (sp>cp)
+{
+	result=sp-cp;
+	printf("Profit is Rs.%d",result);
+}
+else
+{
+	result=cp-sp;
+	printf("Loss is Rs.%d",result);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="PRORLOSS.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I4">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q5)</U>	C PROGRAM TO FIND THE ROOTS OF QUADRATIC EQUATION
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+#include < math.h >
+void main()
+{
+int a,b,c,d,x,x2;
+clrscr();
+printf("THIS IS A PROGRAM TO FIND OUT THE ROOTS OF QUADRATIC EQUATION\n\nEnter the Value of a,b,c\n");
+scanf("%d\n%d\n%d",&a,&b,&c);
+d=(b*b)-((4*a)*c);
+if (d==0)
+{
+	x=-b/(2*a);
+	printf("Ans) %d",x);
+}
+else if (d>0)
+{
+	x=(-b+sqrt(d))/(2*a);
+	x2=(-b-sqrt(d))/(2*a);
+	printf("Ans) %d, %d",x,x2);
+}
+else
+{
+	printf("No Real Roots");
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="QUADRAEQ.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I5">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q6)</U>	C PROGRAM TO FIND SMALLER OF TWO NUMBER
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a,b;
+clrscr();
+printf("this program will show the greater no\nenter 2 no\n");
+scanf("%d%d",&a,&b);
+if (a==b)
+{
+	printf("%d and %d are equal",a,b);
+}
+else if (a>b)
+{
+	printf("%d is greater than %d",a,b);
+}
+else
+{
+	printf("%d is less than %d",a,b);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="SMALLTWO.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I6">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q7)</U>	C POGRAM TO FIND BIGGEST OF THREE NUMBERS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a,b,c;
+clrscr();
+printf("this is a program to find out greatest no\nenter 3 no\n");
+scanf("%d%d%d",&a,&b,&c);
+if (a>b)
+{
+	if (a>c)
+	{
+	printf("%d is the greatest no",a);
+	}
+	else
+	{
+	printf("%d is the greatest no",c);
+	}
+}
+else
+{
+	if (b>c)
+	{
+	printf("%d is the greatest no",b);
+	}
+	else
+	{
+	printf("%d is the greatest no",c);
+	}
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="BIGGESTTHREE.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I7">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q8)</U>	C PROGRAM TO CALCULATE GRADE OF A STUDENT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a;
+clrscr();
+printf("this is a program to find your grade\nenter your marks ");
+scanf("%d",&a);
+if (a<40)
+{
+	printf("F");
+}
+else if (40<=a && a<50)
+{
+	printf("d grade");
+}
+else if (50<=a && a<60)
+{
+	printf("c grade");
+}
+else if (60<=a && a<70)
+{
+	printf("b grade");
+}
+else if (70<=a && a<80)
+{
+	printf("a grade");
+}
+else if (80<=a && a<=100)
+{
+	printf("s grade");
+}
+else
+{
+	printf("extra marks for good hand writting");
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="GRADE.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I8">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q9)</U>	C PROGRAM TO CHECK GIVEN CHARACTER IS AN ALPHABET OR NOT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a;
+clrscr();
+printf("THIS IS A PROGRAM TO FIND OUT THAT THE ENTERED CHARACTER IS An ALPHABET OR NOT\n\nEnter a Character ");
+scanf("%c",&a);
+if (a>=65 && a<=90)
+{
+	printf("The Entered Character Is A Alphabet");
+}
+else if (a>=97 && a<=122)
+{
+	printf("The Entered Character Is A Alphabet");
+}
+else
+{
+	printf("The Entered Character Is Not A Alphabet");
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="ALPHAORNOT.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I9">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q10)</U>	C PROGRAM TO CHECK GIVEN YEAR IS A LEAP YEAR OR NOT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a;
+clrscr();
+printf("this is a program to find out wheather it is a leap year or not\n\nenter the year ");
+scanf("%d",&a);
+if (a%4==0)
+	if (a%100==0)
+		if (a%400==0)
+			printf("\nLEAP YEAR");
+		else
+			printf("\nNOT A LEAP YEAR");
+	else
+		printf("\nLEAP YEAR");
+else
+	printf("\nNOT A LEAP YEAR");
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="LEAPYEAR.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I10">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q11)</U>	C PROGRAM TO FIND BIGGEST OF FOUR NUMBERS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int i,j,great=0,a[3];
+clrscr();
+printf("this is a program to find the greatest no from the given four nos.\n\nenter the four nos.\n");
+for (i=0;i<=3;i++)
+{
+	scanf("%d",&a[i]);
+}
+for (j=0;j<=3;j++)
+{
+	if (a[j]>great)
+	{
+		great=a[j];
+	}
+}
+printf("\nthe greatest no from the given four no is %d",great);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="BIGGESTFOUR.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I11">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q12)</U>	C PROGRAM TO FIND THE PERCENTAGE OF FIVE SUBJECTS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a,b,c,d,e;
+float per;
+clrscr();
+printf("enter the value of 5 subjects\n");
+scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
+per=((a+b+c+d+e)/500.00)*100.00;
+printf("your percentage is is %.2f",per);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="PERCENTA.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I12">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q13)</U>	C PROGRAM TO INPUT TWO DIGIT NUMBER CHARACTER BY CHARACTER AND FIND THE SUM OF ITS DIGITS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int res ,sum;
+clrscr();
+char dgt1,dgt2;
+dgt1=getchar();
+dgt2=getchar();
+sum=dgt1-'0'+dgt2-'0';
+res=0;
+res=res+dgt 1-'0';
+res=res*10+dgt2-'0';
+printf("%d is sum of digit of %d",sum,res);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="CH.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I13">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q14)</U>	C PROGRAM TO CALCULATE LATE FINE OF A LIBRARY CARD MEMBER</BR></BR>
+<TABLE BORDER="3" BORDERCOLOR="BROWN" CELLPADDING="4">
+<TR>
+<TH>
+<FONT COLOR="PINK" SIZE="4">
+DAYS
+</FONT>
+</TH>
+<TH>
+<FONT COLOR="PINK" SIZE="4">
+FINE PER DAY
+</FONT>
+</TH>
+</TR>
+<TR>
+<TH>
+1-5
+</TH>
+<TH>
+Rs.1.00
+</TH>
+</TR>
+<TR>
+<TH>
+6-10
+</TH>
+<TH>
+Rs.2.00
+</TH>
+</TR>
+<TR>
+<TH>
+11-30
+</TH>
+<TH>
+Rs.5.00
+</TH>
+</TR>
+<TR>
+<TH>
+>30
+</TH>
+<TH>
+MEMBERSHIP WILL BE CANCELLED
+</TH>
+</TR>
+</TABLE>
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a,b,i;
+clrscr();
+printf("enter the no. of days till the the day when the book is issued ");
+scanf("%d",&a);
+if (1<=a && a<=5)
+{
+	printf("fine is Rs.1 per day\n");
+	printf("your total fine is Rs.%d",a);
+}
+else if (6<=a && a<=10)
+{
+	printf("fine is Rs.2 per day\n");
+	printf("your total fine is Rs.%d",a+(a*2));
+}
+else if (11<=a && a<=30)
+{
+	printf("fine is Rs.5 per day\n");
+	printf("your total fine is Rs.%d",a+(a*5));
+}
+else
+{
+	printf("your membership is cancelled");
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="LIBRARY.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I14">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q15)</U>	C PROGRAM TO CALCULATE ELECTRICITY BILL</BR></BR>
+<TABLE BORDER="3" BORDERCOLOR="BROWN" CELLPADDING="4">
+<TR>
+<TH>
+<FONT COLOR="PINK" SIZE="4">
+UNITS
+</FONT>
+</TH>
+<TH>
+<FONT COLOR="PINK" SIZE="4">
+CHARGES PER UNIT
+</FONT>
+</TH>
+</TR>
+<TR>
+<TH>
+<=100
+</TH>
+<TH>
+Rs.5.00
+</TH>
+</TR>
+<TR>
+<TH>
+101-150
+</TH>
+<TH>
+Rs.7.00
+</TH>
+</TR>
+<TR>
+<TH>
+151-250
+</TH>
+<TH>
+Rs.9.00
+</TH>
+</TR>
+<TR>
+<TH>
+>=251
+</TH>
+<TH>
+Rs.10.00
+</TH>
+</TR>
+</TABLE>
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a;
+clrscr();
+printf("enter your electricity units consumed this month ");
+scanf("%d",&a);
+if (a<=100)
+{
+	printf("Rs.5 per unit is charched upto the consumption of 100 units\n");
+	printf("your bill is Rs.%d",a*5);
+}
+else if (101<=a && a<=150)
+{
+	printf("Rs.7 per unit is charched upto the consumption of 101-150 units\n");
+	printf("your bill is Rs.%d",a*7);
+}
+else if (151<=a && a<=250)
+{
+	printf("Rs.9 per unit is charched upto the consumption of 151-250 units\n");
+	printf("your bill is Rs.%d",a*9);
+}
+else
+{
+	printf("Rs.10 per unit is charched upto the consumption of more than 250 units\n");
+	printf("your bill is Rs.%d",a*10);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="ELEBILL.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I15">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q16)</U>	C PROGRAM TO CALCULATE AND DISPLAY THE MONTHLY INCOME OF A SALES PERSON CORRESPONDING TO THE VALUE OF MONTHLY SALES</BR></BR>
+<TABLE BORDER="3" BORDERCOLOR="BROWN" CELLPADDING="4">
+<TR>
+<TH>
+<FONT COLOR="PINK" SIZE="4">
+MONTHLY SALES
+</FONT>
+</TH>
+<TH>
+<FONT COLOR="PINK" SIZE="4">
+INCOME
+</FONT>
+</TH>
+</TR>
+<TR>
+<TH>
+>=Rs.50,000
+</TH>
+<TH>
+Rs.3,750 + 16% OF  SALES
+</TH>
+</TR>
+<TR>
+<TH>
+>=Rs.40,000 AND <Rs.50,000
+</TH>
+<TH>
+Rs.3,500 + 14% OF SALES
+</TH>
+</TR>
+<TR>
+<TH>
+>=Rs.30,000 AND <Rs.40,000
+</TH>
+<TH>
+Rs.3,250 + 12% OF SALES
+</TH>
+</TR>
+<TR>
+<TH>
+>=Rs.20,000 AND <Rs.30,000
+</TH>
+<TH>
+Rs.3,000 + 9% OF SALES
+</TH>
+</TR>
+<TR>
+<TH>
+>=Rs.10,000 AND <Rs.20,000
+</TH>
+<TH>
+Rs.2,500 + 5% OF SALES
+</TH>
+</TR>
+<TR>
+<TH>
+< Rs.10,000
+</TH>
+<TH>
+Rs.2,000 + 3% OF SALES
+</TH>
+</TR>
+</TABLE>
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+long a,b;
+clrscr();
+printf("THIS PROGRAM IS TO CALCULATE AND DISPLAY THE MONTHLY INCOME OF A SALES PERSON CORRESPONDING TO THE VALUE OF MONTHLY SALES\n\nEnter The Amount Of Sales You Made This Month Rs.");
+scanf("%lu",&a);
+if (a>=50000)
+{
+	b=((a*16)/100)+3750;
+	printf("Rs.3750 + 16per. of sales is paid as salary for the sales made more than Rs.50000 in a month\nYour Total Salary for this Month is Rs.%lu",b);
+}
+else if (a>=40000 && a<50000)
+{
+	b=((a*14)/100)+3500;
+	printf("Rs.3500 + 14per. of sales is paid as salary for the sales made for Rs.40000 to Rs.50000 in a month\nYour Total Salary for this Month is Rs.%lu",b);
+}
+else if (a>=30000 && a<40000)
+{
+	b=((a*12)/100)+3250;
+	printf("Rs.3250 + 12per. of sales is paid as salary for the sales made for Rs.30000 to Rs.40000 in a month\nYour Total Salary for this Month is Rs.%lu",b);
+}
+else if (a>=20000 && a<30000)
+{
+	b=((a*9)/100)+3000;
+	printf("Rs.3000 + 9per. of sales is paid as salary for the sales made  for Rs.20000 to Rs.30000 in a month\nYour Total Salary for this Month is Rs.%lu",b);
+}
+else if (a>=10000 && a<20000)
+{
+	b=((a*5)/100)+2500;
+	printf("Rs.2500 + 5per. of sales is paid as salary for the sales made for Rs.10000 to Rs.20000 in a month\nYour Total Salary for this Month is Rs.%lu",b);
+}
+else
+{
+	b=((a*3)/100)+2000;
+	printf("Rs.2000 + 3per. of sales is paid as salary for the sales made less than Rs.10000 in a month\nYour Total Salary for this Month is Rs.%lu",b);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="SALESPER.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I16">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q17)</U>	C PROGRAM TO COMPUTE THE WAGES OF A DAILY LABORER AS PER THE FOLLOWING RULES:-</BR></BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOURS WORKED RATE</BR>
+<OL TYPE="a">
+<LI>APPLICABLE UPTO FIRST 8 HRS Rs.50/-
+<LI>FOR NEXT 4 HRS Rs.10/- PER HR EXTRA
+<LI>FOR NEXT 4 HRS Rs.20/- PER HR EXTRA
+<LI>FOR NEXT 4 HRS Rs.25/- PER HR EXTRA
+<LI>FOR REST Rs.40/- PER HR EXTRA
+</OL>
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+#include < string.h >
+void main()
+{
+char en[100];
+int hr,wages,n,i;
+clrscr();
+printf("THIS IS A PROGRAM TO CALCULATE THE WAGES OF LABOURERS ON THE BASIS OF AMOUNT OF TIME THEY WORKED\n\nEnter Wages How Many Labourer You Want To Calculate ");
+scanf("%d",&n);
+for (i=1;i<=n;i++)
+{
+	printf("\n\nEnter Your Name ");
+	scanf("%s",en);
+	printf("\nEnter How Many Hours You Worked ");
+	scanf("%d",&hr);
+	if (hr<=8)
+	{
+		printf("Wages Rs.50");
+	}
+	else if (hr>8 && hr<=12)
+	{
+		wages=50+(hr-8)*10;
+		printf("Wages Rs.%d",wages);
+	}
+	else if (hr>12 && hr<=16)
+	{
+		wages=50+40+(hr-12)*20;
+		printf("Wages Rs.%d",wages);
+	}
+	else if (hr>16 && hr<=20)
+	{
+		wages=50+40+80+(hr-16)*25;
+		printf("Wages Rs.%d",wages);
+	}
+	else
+	{
+		wages=50+40+80+100+(hr-20)*40;
+		printf("Wages Rs.%d",wages);
+	}
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="WAGES.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I17">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q18)</U>	C PROGRAM TO CALCULATE THE INCOME TAX OF AN EMPLOYEE FOR THE CURRENT FINANCIAL YEAR. A USER WILL ENTER HIS AGE AND TOTAL SALARY OF THE CURRENT YEAR AND PROGRAM WILL CALCULATE AND DISPAY THE PAYABLE INCOME TAX FROM THE GIVEN TABLE. TAX SLABS ARE APPLICABLE AFTER DEDUCTING Rs.1,00,000 OF SAVING FROM TOTAL SALARY FOR EACH EMPLOYEE. THE TAX SLABS ARE AS UNDER:
+(SENIOR CITIZEN: AGE>=60)
+</BR></BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FOR ALL</BR>
+<OL TYPE="a">
+<LI>TAX Rs.0 TO Rs.2,00,000  0% OF INCOME
+<LI>2,00,001-5,00,000 10% ON INCOME EXCESS OF 5,00,000
+<LI>5,00,001-10,00,000  25,000+20% ON INCOME EXCESS OF 5,00,000
+<LI>ABOVE Rs.10,00,000  1,30,000+30% ON INCOME EXCESS OF 10,00,000
+</OL>
+</BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FOR SENIOR CITIZEN TAX</BR>
+<OL TYPE="a">
+<LI>Rs.0 TO 2,50,000  0% OF INCOME
+<LI>2,50,001-5,00,000  10% ON INCOME EXCESS OF 2,50,000
+<LI>5,00,001-10,00,000  25,000+20% ON INCOME EXCESS OF 5,00,000
+<LI>ABOVE Rs.10,00,000  1,25,000+30% ON INCOME EXCESS OF 10,00,000
+</OL>
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int age;
+long sal,tax;
+clrscr();
+printf("THIS IS A PROGRAM TO CALCULATE HOW MUCH TAX A EMPLOYEE HAS TO PAY\n\nEnter Your Age ");
+scanf("%d",&age);
+printf("Enter Your Salary ");
+scanf("%lu",&sal);
+if (age<60)
+{
+	if (sal>=0 && sal<=200000)
+	{
+		printf("No Income Tax");
+	}
+	else if (sal>200000 && sal<=500000)
+	{
+		tax=(sal*10)/100;
+		printf("Income Tax %lu",tax);
+	}
+	else if (sal>500000 && sal<=1000000)
+	{
+		tax=30000+((sal*20)/100);
+		printf("Income Tax %lu",tax);
+	}
+	else if (sal>1000000)
+	{
+		tax=130000+((sal*30)/100);
+		printf("Income Tax %lu",tax);
+	}
+}
+else
+{
+	if (sal>=0 && sal<=250000)
+	{
+		printf("No Income Tax");
+	}
+	else if (sal>250000 && sal<=500000)
+	{
+		tax=(sal*10)/100;
+		printf("Income Tax %lu",tax);
+	}
+	else if (sal>500000 && sal<=1000000)
+	{
+		tax=25000+((sal*20)/100);
+		printf("Income Tax %lu",tax);
+	}
+	else if (sal>1000000)
+	{
+		tax=125000+((sal*30)/100);
+		printf("Income Tax %lu",tax);
+	}
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="INCTAX.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I18">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+</B>
+
+</BODY>
+</HTML>

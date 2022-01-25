@@ -1,0 +1,553 @@
+<HTML>
+<HEAD>
+<TITLE>
+NIELIT
+</TITLE>
+
+<SCRIPT LANGUAGE="VBSCRIPT">
+
+SUB I1_ONMOUSEOVER()
+	DOCUMENT.I1.SRC="OUTPUT2.JPG"
+END SUB
+SUB I1_ONMOUSEOUT()
+	DOCUMENT.I1.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I2_ONMOUSEOVER()
+	DOCUMENT.I2.SRC="OUTPUT2.JPG"
+END SUB
+SUB I2_ONMOUSEOUT()
+	DOCUMENT.I2.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I3_ONMOUSEOVER()
+	DOCUMENT.I3.SRC="OUTPUT2.JPG"
+END SUB
+SUB I3_ONMOUSEOUT()
+	DOCUMENT.I3.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I4_ONMOUSEOVER()
+	DOCUMENT.I4.SRC="OUTPUT2.JPG"
+END SUB
+SUB I4_ONMOUSEOUT()
+	DOCUMENT.I4.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I5_ONMOUSEOVER()
+	DOCUMENT.I5.SRC="OUTPUT2.JPG"
+END SUB
+SUB I5_ONMOUSEOUT()
+	DOCUMENT.I5.SRC="OUTPUT.JPG"
+END SUB
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="BLACK" TEXT="WHITE">
+
+<CENTER>
+<H1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<U><B>
+STACK
+</B></U>
+</FONT>
+</H1>
+</CENTER>
+
+<B>
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q1)</U>	C PROGRAM TO CREATE A STACK FOR INTEGER DATA TYPE AND THEN DISPLAY THE VALUES OF STACK
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct stack
+{
+int a[10];
+int top;
+}s;
+
+void main()
+{
+void create();
+void display();
+clrscr();
+printf("\t\t\t\t\tSTACKS\n\n");
+create();
+display();
+getch();
+}
+
+void create()
+{
+int n=1;
+s.top=-1;
+printf("Enter The Value Of Stack\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (s.top<9)
+	{
+		s.top++;
+		s.a[s.top]=n;
+	}
+	else
+	{
+		printf("OVERFLOW STACK CAN INPUT ONLY 10 VALUES\n");
+		break;
+	}
+	if (s.top<9)
+		scanf("%d",&n);
+}
+printf("END OF STACK\n\n");
+}
+
+
+void display()
+{
+int i;
+printf("DISPLAY\n\n");
+for (i=s.top ; i>=0 ; i--)
+{
+	printf("%d\t",s.a[i]);
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STACK.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I1">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q2)</U>	C PROGRAM TO PUSH(INSERT) A ELEMENT IN STACK
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct stack
+{
+int a[10];
+int top;
+}s;
+
+void main()
+{
+void create();
+void display();
+void push();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY AND PUSH A ELEMENT IN STACK\n\n");
+create();
+display();
+push();
+getch();
+}
+
+void create()
+{
+int n;
+s.top=-1;
+printf("Enter 10 Values & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (s.top<9)
+	{
+		s.top++;
+		s.a[s.top]=n;
+	}
+	else
+	{
+		printf("Stack Overflow\n");
+		break;
+	}
+	if (s.top!=9)
+	{
+		scanf("%d",&n);
+	}
+}
+printf("End Of Stack\n\n");
+}
+
+void display()
+{
+int i;
+i=s.top;
+printf("STACK\n");
+while (i>=0)
+{
+	printf("%d\t",s.a[i]);
+	i--;
+}
+}
+
+void push()
+{
+int n;
+printf("\nPUSH");
+if (s.top==9)
+{
+	printf("\nStack Is Already Full\n\n");
+}
+else
+{
+	s.top++;
+	printf("\nEnter The New Element Of Stack ");
+	scanf("%d",&n);
+	s.a[s.top]=n;
+	printf("\n");
+	display();
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STACPUSH.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I2">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q3)</U>	C PROGRAM TO POP (DELETE) A ELEMENT OF STACK
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct stack
+{
+int a[10];
+int top;
+}s;
+
+void main()
+{
+void create();
+void display();
+void pop();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & POP A ELEMENT FROM STACK\n\n");
+create();
+display();
+pop();
+getch();
+}
+
+void create()
+{
+int n;
+s.top=-1;
+printf("Enter Values & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (s.top<9)
+	{
+		s.top++;
+		s.a[s.top]=n;
+	}
+	else
+	{
+		printf("STACK OVERFLOW IT CAN ACCEPT ONLY 10 VALUES\n");
+		break;
+	}
+	if (s.top<9)
+		scanf("%d",&n);
+}
+printf("End Of Stack\n\n");
+}
+
+void display()
+{
+int i;
+printf("STACK\n");
+for (i=s.top ; i>=0 ; i--)
+	printf("%d\t",s.a[i]);
+}
+
+void pop()
+{
+printf("\n\nPOP\n");
+if (s.top==-1)
+	printf("Stack Is Empty\nNo Element To Be Pop(Delete)");
+else
+{
+	printf("Last Element Is Deleted\n\n");
+	s.top--;
+	display();
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STACKPOP.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I3">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q4)</U>	C PROGRAM TO CHECK WHEATHER THE STACK IS EMPTY OR NOT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct stack
+{
+int a[10];
+int top;
+}s;
+
+void main()
+{
+void create();
+void display();
+void is_empty();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE & DISPLAY THE STACK & CHECK WHEATHER THE STACK IS   EMPTY OR NOT\n\n");
+create();
+display();
+is_empty();
+getch();
+}
+
+void create()
+{
+int n;
+s.top=-1;
+printf("Enter The Values & Enter 0 To Exit\n");
+scanf("%d",&n);
+
+while (n!=0)
+{
+	if (s.top<9)
+	{
+		s.top++;
+		s.a[s.top]=n;
+	}
+	else
+	{
+		printf("STACK OVERFLOW IT CAN INPUT ONLY 10 VALUES\n");
+		break;
+	}
+	if (s.top<9)
+		scanf("%d",&n);
+}
+printf("End Of Stack\n\n");
+}
+
+void display()
+{
+int i;
+printf("STACK\n");
+for (i=s.top ; i>=0 ; i--)
+{
+	printf("%d\t",s.a[i]);
+}
+}
+
+void is_empty()
+{
+if (s.top==-1)
+	printf("\nSTACK IS EMPTY");
+else
+	printf("STACK IS NOT EMPTY");
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STACEMPT.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I4">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q5)</U>	C PROGRAM TO CREATE A MENU TO PERFORM VARIOUS OPERATIONS ON STACK LIKE:-</BR></BR>
+<OL>
+<LI>CREATE
+<LI>DISPLAY
+<LI>PUSH
+<LI>POP
+<LI>CHECK WHEATHER IT IS EMPTY OR NOT
+</OL>
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct stack
+{
+int a[10];
+int top;
+}s;
+
+void main()
+{
+int n=1;
+void create();
+void display();
+void push();
+void pop();
+void is_empty();
+clrscr();
+printf("THIS IS A PROGRAM TO MAKE A STACK & PERFORM OPERATIONS ON IT\n\nNOTE:PROGRAM WILL NOT END TILL THE USER ENTER HIS\HER \"STACK OPERATIONS CHOICE\"  AS 0\n");
+printf("\nStack Operations\n1. Create\n2. Display\n3. Push\n4. Pop\n5. Is_Empty\n");
+
+while (!(n==1 && n==2 && n==3 && n==4 && n==5))
+{
+	printf("\nEnter Your Choice ");
+	scanf("%d",&n);
+	switch (n)
+	{
+		case 1:
+		create();
+		break;
+
+		case 2:
+		display();
+		break;
+
+		case 3:
+		push();
+		break;
+
+		case 4:
+		pop();
+		break;
+
+		case 5:
+		is_empty();
+		break;
+
+		default:
+		getch();
+		exit(0);
+		break;
+	}
+}
+getch();
+}
+
+void create()
+{
+int n;
+s.top=-1;
+printf("\t\t\t\tCREATE\n\nEnter The Values & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (s.top<9)
+	{
+		s.top++;
+		s.a[s.top]=n;
+	}
+	else
+	{
+		printf("STACK OVERFLOW IT CAN ACCEPT ONLY 10 VALUES\n");
+		break;
+	}
+	if (s.top<9)
+		scanf("%d",&n);
+}
+printf("End Of Stack\n\n");
+}
+
+void display()
+{
+int i;
+printf("\t\t\t\tDISPLAY\n\nStack\n");
+for (i=s.top ; i>=0 ; i--)
+	printf("%d\t",s.a[i]);
+printf("\n\n");
+}
+
+void push()
+{
+int n;
+printf("\t\t\t\tPUSH\n\n");
+if (s.top==9)
+	printf("Stack Is Already Full\n\n");
+else
+{
+	s.top++;
+	printf("Enter The New Element Of Stack ");
+	scanf("%d",&n);
+	s.a[s.top]=n;
+	printf("\n\n");
+}
+}
+
+void pop()
+{
+printf("\t\t\t\tPOP\n\n");
+if (s.top==-1)
+	printf("Stack Is Empty\n\n");
+else
+{
+	printf("Last Element Of The Stack Is Deleted\n\n");
+	s.top--;
+}
+}
+
+void is_empty()
+{
+printf("\t\t\t\tIS_EMPTY\n\n");
+if (s.top==-1)
+	printf("Stack Is Empty\n\n");
+else
+	printf("Stack Is Not Empty\n\n");
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STACMENU.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I5">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+
+
+
+</B>
+
+
+
+</BODY>
+</HTML>

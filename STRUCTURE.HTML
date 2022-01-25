@@ -1,0 +1,673 @@
+<HTML>
+<HEAD>
+<TITLE>
+NIELIT
+</TITLE>
+
+<SCRIPT LANGUAGE="VBSCRIPT">
+
+SUB I1_ONMOUSEOVER()
+	DOCUMENT.I1.SRC="OUTPUT2.JPG"
+END SUB
+SUB I1_ONMOUSEOUT()
+	DOCUMENT.I1.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I2_ONMOUSEOVER()
+	DOCUMENT.I2.SRC="OUTPUT2.JPG"
+END SUB
+SUB I2_ONMOUSEOUT()
+	DOCUMENT.I2.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I3_ONMOUSEOVER()
+	DOCUMENT.I3.SRC="OUTPUT2.JPG"
+END SUB
+SUB I3_ONMOUSEOUT()
+	DOCUMENT.I3.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I4_ONMOUSEOVER()
+	DOCUMENT.I4.SRC="OUTPUT2.JPG"
+END SUB
+SUB I4_ONMOUSEOUT()
+	DOCUMENT.I4.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I5_ONMOUSEOVER()
+	DOCUMENT.I5.SRC="OUTPUT2.JPG"
+END SUB
+SUB I5_ONMOUSEOUT()
+	DOCUMENT.I5.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I6_ONMOUSEOVER()
+	DOCUMENT.I6.SRC="OUTPUT2.JPG"
+END SUB
+SUB I6_ONMOUSEOUT()
+	DOCUMENT.I6.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I7_ONMOUSEOVER()
+	DOCUMENT.I7.SRC="OUTPUT2.JPG"
+END SUB
+SUB I7_ONMOUSEOUT()
+	DOCUMENT.I7.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I8_ONMOUSEOVER()
+	DOCUMENT.I8.SRC="OUTPUT2.JPG"
+END SUB
+SUB I8_ONMOUSEOUT()
+	DOCUMENT.I8.SRC="OUTPUT.JPG"
+END SUB
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="BLACK" TEXT="WHITE">
+
+<CENTER>
+<H1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<U><B>
+STRUCTURE
+</B></U>
+</FONT>
+</H1>
+</CENTER>
+
+<B>
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q1)</U>	C PROGRAM TO INPUT NAME, CLASS AND MARKS OF FIVE SUBJECTS FROM THE USER IN A STRUCTURE AND THEN DISPLAY IT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct student
+{
+int cl;
+char na[100];
+char na2[100];
+int m[5];
+};
+
+void main()
+{
+int i;
+struct student stud;
+clrscr();
+printf("THIS IS A PROGRAM TO INPUT STUDENTS NAME HIS/HER CLASS AND HIS/HER MARKS OF FIVE SUBJECTS AND DISPLAY THEM ON SCREEN\n\n");
+printf("\nEnter Your First Name ");
+scanf("%s",stud.na);
+printf("Enter Your Last Name ");
+scanf("%s",stud.na2);
+printf("Enter Your Class ");
+scanf("%d",&stud.cl);
+printf("Enter Your Marks\n");
+for (i=0 ; i < 5 ; i++)
+{
+	if (i==0)
+	{
+		printf("ENGLISH\t");
+		scanf("%d",&stud.m[i]);
+	}
+	else if (i==1)
+	{
+		printf("MATHS\t");
+		scanf("%d",&stud.m[i]);
+	}
+	else if (i==2)
+	{
+		printf("SST\t");
+		scanf("%d",&stud.m[i]);
+	}
+	else if (i==3)
+	{
+		printf("SCIENCE\t");
+		scanf("%d",&stud.m[i]);
+	}
+	else if (i==4)
+	{
+		printf("SANSKRIT");
+		scanf("%d",&stud.m[i]);
+	}
+}
+printf("\n\n");
+printf("Name: %s %s\nClass: %d\n",stud.na,stud.na2,stud.cl);
+printf("ENGLISH\t\tMATHS\t\tSST\t\tSCIENCE\t\tSANSKRIT\n");
+printf("%d\t\t%d\t\t%d\t\t%d\t\t%d",stud.m[0],stud.m[1],stud.m[2],stud.m[3],stud.m[4]);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRUCT1.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I1">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q2)</U>	C PROGRAM TO INPUT NAME, CLASS AND MARKS OF FIVE SUBJECTS FROM THE USER FOR 10 STUDENTS IN A STRUCTURE AND THEN DISPLAY IT IN A TABULAR FORMAT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct student
+{
+char sn[100];
+int cl;
+int marks[5];
+};
+
+void main()
+{
+int i,j;
+struct student std[10];
+clrscr();
+printf("THIS IS A PROGRAM TO INPUT INFO OF 10 STUDENT THEIR NAME THEIR CLASS AND THEIR MARKS OF FIVE SUBJECTS\n\n");
+for (i=0 ; i < 10 ; i++)
+{
+	printf("\nEnter Your Name ");
+	scanf("%s",std[i].sn);
+	printf("Enter Your Class ");
+	scanf("%d",&std[i].cl);
+	printf("Enter Your Marks ");
+	for (j=0 ; j < 5 ; j++)
+	{
+		if (j==0)
+		{
+			printf("\nENGLISH\t");
+			scanf("%d",&std[i].marks[j]);
+		}
+		else if (j==1)
+		{
+			printf("MATHS\t");
+			scanf("%d",&std[i].marks[j]);
+		}
+		else if (j==2)
+		{
+			printf("SST\t");
+			scanf("%d",&std[i].marks[j]);
+		}
+		else if (j==3)
+		{
+			printf("SCIENCE\t");
+			scanf("%d",&std[i].marks[j]);
+		}
+		else if (j==4)
+		{
+			printf("SANSKRIT");
+			scanf("%d",&std[i].marks[j]);
+		}
+	}
+}
+for (i=0 ; i < 10 ; i++)
+{
+	printf("\n\nName: %s\nClass: %d\n",std[i].sn,std[i].cl);
+	printf("ENGLISH\t\tMATHS\t\tSST\t\tSCIENCE\t\tSANSKRIT\n");
+	printf("%d\t\t%d\t\t%d\t\t%d\t\t%d",std[i].marks[0],std[i].marks[1],std[i].marks[2],std[i].marks[3],std[i].marks[4]);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRUCT2.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I2">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q3)</U>	C PROGRAM TO INPUT CLASS AND MARKS OF FIVE SUBJECTS FROM THE USER FOR 10 STUDENTS IN A STRUCTURE AND THEN DISPLAY IT IN A TABULAR FORMAT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct student
+{
+int cl;
+int marks[5];
+};
+
+void main()
+{
+int i,j;
+struct student std[2];
+clrscr();
+printf("THIS IS A PROGRAM TO INPUT INFO OF 10 STUDENT THEIR NAME THEIR CLASS AND THEIR MARKS OF FIVE SUBJECTS\n");
+for (i=0 ; i < 2 ; i++)
+{
+	printf("\nEnter Your Class ");
+	scanf("%d",&std[i].cl);
+	printf("Enter Your Marks");
+	for (j=0 ; j < 5 ; j++)
+	{
+		if (j==0)
+		{
+			printf("\nENGLISH\t");
+			scanf("%d",&std[i].marks[j]);
+		}
+		else if (j==1)
+		{
+			printf("MATHS\t");
+			scanf("%d",&std[i].marks[j]);
+		}
+		else if (j==2)
+		{
+			printf("SST\t");
+			scanf("%d",&std[i].marks[j]);
+		}
+		else if (j==3)
+		{
+			printf("SCIENCE\t");
+			scanf("%d",&std[i].marks[j]);
+		}
+		else if (j==4)
+		{
+			printf("SANSKRIT");
+			scanf("%d",&std[i].marks[j]);
+		}
+	}
+}
+for (i=0 ; i < 2 ; i++)
+{
+	printf("\n\nClass: %d\n",std[i].cl);
+	printf("ENGLISH\t\tMATHS\t\tSST\t\tSCIENCE\t\tSANSKRIT\n");
+	printf("%d\t\t%d\t\t%d\t\t%d\t\t%d",std[i].marks[0],std[i].marks[1],std[i].marks[2],std[i].marks[3],std[i].marks[4]);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRUCT3.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I3">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q4)</U>	C PROGRAM TO INPUT NAME, ADDRESS AND TELEPHONE NUMBER OF ‘N’ PERSON (N<=20). SORT ACCORDING TO THE NAME AS A PRIMARY KEY AND ADDRESS AS THE SECONDARY KEY. PRINT THE SORTED TELEPONE DIRECTORY
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct phone
+{
+char na[100];
+char ad[200];
+char ph[10];
+};
+
+void main()
+{
+int i,j,min,n;
+char temp[100];
+struct phone dir[20];
+clrscr();
+printf("THIS IS A PROGRAM TO INPUT THE NAME, ADDRESS AND PHONE NO. OF USERS AND DISPLAY THE SORTED TELEPHONE DIRECTORY\n\nNOTE:Please Use (_) Character Instead Of Space For Smooth Functioning Of Program\n\nData Of How Many People You Want To Enter\n(info of upto 20 people can be entered)\n");
+scanf("%d",&n);
+if (n<=20)
+{
+	for (i=0 ; i < n ; i++)
+	{
+		printf("\nEnter Your Name ");
+		scanf("%s",dir[i].na);
+		printf("Enter Your Address ");
+		scanf("%s",dir[i].ad);
+		printf("Enter Your Phone No. ");
+		scanf("%s",dir[i].ph);
+	}
+	for (i=0 ; i < n ; i++)
+	{
+		min=i;
+		for (j=i+1 ; j < n ; j++)
+		{
+			if (stricmp(dir[min].na,dir[j].na)>0)
+				min=j;
+		}
+		if (i!=min)
+		{
+			strcpy(temp,dir[min].na);
+			strcpy(dir[min].na,dir[i].na);
+			strcpy(dir[i].na,temp);
+		}
+	}
+	printf("\n\nSORTED TELEPHONE DIRECTORY\n");
+	printf("NAME\t\tPHONE NO.\t\tADDRESS\n");
+	for (i=0 ; i < n ; i++)
+	{
+	printf("%s\t\t%s\t\t%s\n",dir[i].na,dir[i].ph,dir[i].ad);
+	}
+}
+else
+{
+	printf("Info Of Upto 20 People Can Be Entered");
+	getch();
+	exit(0);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRUCT4.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I4">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q5)</U>	DEFINE A STRUCTURE FOR AN EMPLOYEE HAVING EmployeeName, EmployeeCode, BasicPay, DearnessAllowance, HRA, PF, GrossPay, NetPay TAKE AN ARRAY OF 10 EMPLOYEES. WRITE C FUNCTION TO:</BR></BR>
+<OL>
+<LI>ACCEPT DATA FOR EmployeeName, EmployeeCode, BasicPay FOR ALL THE EMPLOYEES.
+<LI>COMPUTE:</BR>
+<OL TYPE="I">
+<LI>DearnessAllowance=50% OF BasicPay
+<LI>HRA=20% OF BasicPay + DearnessAllowance
+<LI>PF=12% OF BasicPay + DearnessAllowance
+<LI>GrossPay=BasicPay + DearnessAllowance + HRA
+<LI>NetPay=GrossPay – PF
+</OL>
+<LI>DISPLAY THE NAME OF EMPLOYEE WHO HAS HIGHEST GrossPay
+<LI>COMPUTE AND DISPLAY AVERAGE NET PAY
+<LI>DISPLAY LIST OF ALL EMPLOYEES IN THE ALLPHABETICAL ORDER OF EMPLOYEE NAME
+</OL>
+
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include<stdio.h>
+#include<conio.h>
+struct money
+{
+char en[100];
+long ec,bp,da,hra,pf,gp,np;
+};
+void main()
+{
+int i,j,n,min,na;
+long sum=0,max=0;
+char temp2[100];
+struct money a[10];
+clrscr();
+printf("THIS IS A PROGRAM TO CALCULATE EMPLOYEE'S DEARNESS ALLOWANCE, HRA, PF, GROSS PAY, NET PAY");
+for (i=0;i<10;i++)
+{
+	printf("\n\nEnter Employee Name ");
+	scanf("%s",a[i].en);
+	printf("Enter Employee Code ");
+	scanf("%lu",&a[i].ec);
+	printf("Enter Your Basic Pay ");
+	scanf("%lu",&a[i].bp);
+
+	a[i].da=a[i].bp/2;
+	printf("Your Dearness Allowance is %lu",a[i].da);
+
+	a[i].hra=((a[i].bp*20)/100)+a[i].da;
+	printf("\nYour HRA is %lu",a[i].hra);
+
+	a[i].pf=((12*a[i].bp)/100)+a[i].da;
+	printf("\nYour PF is %lu",a[i].pf);
+
+	a[i].gp=a[i].bp+a[i].da+a[i].hra;
+	printf("\nYour Gross Pay is %lu",a[i].gp);
+
+	a[i].np=a[i].gp-a[i].pf;
+	printf("\nYour Net Pay is %lu",a[i].np);
+}
+getch();
+
+//highest gross pay
+for (i=0;i<10;i++)
+{
+		if (max<a[i].gp)
+		{
+			max=a[i].gp;
+			na=i;
+		}
+}
+printf("\n\n%s Has Got The Highest Gross Pay: Rs.%lu",a[na].en,max);
+getch();
+
+//sorted gross pay
+printf("\nSORTED GROSS PAY OF EMPLOYEES");
+for (i=0;i<10;i++)
+{
+	printf("\n%s: %lu",a[i].en,a[i].gp);
+}
+getch();
+
+//average net pay
+for (i=0;i<10;i++)
+{
+	sum+=a[i].np;
+}
+sum/=10;
+printf("\n\nAverage Net Pay %lu",sum);
+getch();
+
+//name sorting
+for (i=0;i<10;i++)
+{
+	min=i;
+	for (j=i+1;j<10;j++)
+	{
+		if (stricmp(a[min].en,a[j].en)>0)
+			min=j;
+	}
+	if (i!=min)
+	{
+		strcpy(temp2,a[min].en);
+		strcpy(a[min].en,a[i].en);
+		strcpy(a[i].en,temp2);
+	}
+}
+printf("\n\nEMPLOYEE NAMES IN SORTED ORDER\n");
+for (i=0;i<10;i++)
+{
+	puts(a[i].en);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRUCT5.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I5">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q6)</U>	C PROGRAM WHICH ASKS THE USER TO ENTER THE NAME AND AGE OF PERSONS IN HIS GROUP. THE NUMBERS OF PERSONS IS NOT KNOWN TO THE USER IN THE BEGINNING OF THE PROGRAM. THE USER KEEPS ON ENTERING THE DATA TILL THE USER ENTERS THE AGE AS ZERO. THE PROGRAM FINALLY PRINTS THE AVERAGE AGE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct age
+{
+int age;
+char na[100];
+}a[100];
+
+void main()
+{
+int i,e=0,sum=0,avg;
+clrscr();
+printf("THIS IS A PROGRAM TO INPUT THE NAME AND AGE OF PERSONS AND SHOW THE AVERAGE AGE\nNOTE:The Program Won't Be Terminated Till The User Enter The Age As 0\n");
+for (i=0 ; i<=e ; i++)
+{
+	printf("\nEnter Your Name ");
+	scanf("%s",a[i].na);
+	printf("Enter Your Age ");
+	scanf("%d",&a[i].age);
+	sum+=a[i].age;
+	if (a[i].age!=0)
+	{
+		e++;
+	}
+}
+avg=sum/(e);
+printf("\n\nAverage Age %d",avg);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRUCT6.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I6">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q7)</U>	DEFINE A STRUCTURE OF STUDENT WITH THE FOLLOWING FIELDS: ROLLNO, NAME, MARKS. WRITE A C PROGRAM TO READ AND STORE THE DATA OF AT MOST 30 STUDENTS IN AN ARRAY. ALSO DISPLAY THE AVERAGE MARKS OF THE STUDENTS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct student
+{
+int rn;
+char na[100];
+int marks;
+};
+
+void main()
+{
+int i;
+float sum=0,avg;
+struct student std[2];
+clrscr();
+printf("THIS IS A PROGRAM TO INPUT THE ROLL NO, NAME AND MARKS OF 30 STUDENT AND CALCULATE THE AVERAGE MARKS OF THE STUDENTS\n");
+for (i=0 ; i<2 ; i++)
+{
+	printf("\nEnter Your Roll No. ");
+	scanf("%d",&std[i].rn);
+	printf("Enter Your Name ");
+	scanf("%s",std[i].na);
+	printf("Enter Your Total Marks ");
+	scanf("%d",&std[i].marks);
+	sum+=std[i].marks;
+}
+avg=sum/2;
+printf("\n\nAverage Marks Of Students Are %.2f",avg);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRUCT7.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I7">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q8)</U>	DEFINE TWO STRUCTURE METRIC AND BRITISH THAT STORE DISTANCES. THE METRIC STORES VALUE IN METERS AND CENTIMETERS AND THE BRITISH STORES VALUES IN FEET AND INCHES. WRITE A C PROGRAM THAT READS BOTH STTRUCTURE VARIABLES AND ADD VALUES CONTAINED IN ONE VARIABLE OF METRIC TO THE CONTENTS OF ANOTHER VARIABLE OF BRITISH. THE PROGRAM SHOULD DISPLAY THE RESULT IN BOTH: EQUIVALENT CENTIMETERS AND EQUIVALENT INCHES
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct metric
+{
+int meter;
+int cm;
+}m;
+
+struct british
+{
+int feet;
+int inches;
+}b;
+
+void main()
+{
+float c,i;
+clrscr();
+printf("THIS IS A PROGRAM TO ADD THE VALUE OF FEET, INCHES AND METERS, C.M.\nAND DISPLAY THE RESULT IN BOTH:\nEQUIVALENT C.M. AND\nEQUIVALENT INCHES\n\nEnter The Value In Feet \t");
+scanf("%d",&b.feet);
+printf("Enter The Value In Inches \t");
+scanf("%d",&b.inches);
+printf("\nEnter The Value In Meters \t");
+scanf("%d",&m.meter);
+printf("Enter The Value In C.M. \t");
+scanf("%d",&m.cm);
+/*conversion of all the values in c.m.*/
+c=m.cm+(m.meter*100.00)+(b.feet*30.00)+(b.inches*2.5);
+printf("\nTOTAL VALUE\nC.M.: \t%.2f",c);
+/*conversion of all the values in inches*/
+i=(m.cm*0.4)+(m.meter*40.00)+(b.feet*12.00)+b.inches;
+printf("\nINCHES:\t%.2f",i);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRUCT8.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I8">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+
+
+</B>
+
+
+
+
+</BODY>
+</HTML>

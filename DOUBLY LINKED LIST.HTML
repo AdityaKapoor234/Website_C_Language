@@ -1,0 +1,799 @@
+<HTML>
+<HEAD>
+<TITLE>
+NIELIT
+</TITLE>
+
+<SCRIPT LANGUAGE="VBSCRIPT">
+
+SUB I1_ONMOUSEOVER()
+	DOCUMENT.I1.SRC="OUTPUT2.JPG"
+END SUB
+SUB I1_ONMOUSEOUT()
+	DOCUMENT.I1.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I2_ONMOUSEOVER()
+	DOCUMENT.I2.SRC="OUTPUT2.JPG"
+END SUB
+SUB I2_ONMOUSEOUT()
+	DOCUMENT.I2.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I3_ONMOUSEOVER()
+	DOCUMENT.I3.SRC="OUTPUT2.JPG"
+END SUB
+SUB I3_ONMOUSEOUT()
+	DOCUMENT.I3.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I4_ONMOUSEOVER()
+	DOCUMENT.I4.SRC="OUTPUT2.JPG"
+END SUB
+SUB I4_ONMOUSEOUT()
+	DOCUMENT.I4.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I5_ONMOUSEOVER()
+	DOCUMENT.I5.SRC="OUTPUT2.JPG"
+END SUB
+SUB I5_ONMOUSEOUT()
+	DOCUMENT.I5.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I6_ONMOUSEOVER()
+	DOCUMENT.I6.SRC="OUTPUT2.JPG"
+END SUB
+SUB I6_ONMOUSEOUT()
+	DOCUMENT.I6.SRC="OUTPUT.JPG"
+END SUB
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="BLACK" TEXT="WHITE">
+
+<CENTER>
+<H1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<U><B>
+DOUBLY LINKED LIST
+</B></U>
+</FONT>
+</H1>
+</CENTER>
+
+<B>
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q1)</U>	C PROGRAM TO CREATE A DOUBLY LINKED LIST FOR INTEGER DATA TYPE AND THEN DISPLAY THE VALUES OF LINKED ELEMENTS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+struct node *prev;
+}*start=NULL, *last=NULL;
+
+void main()
+{
+void create();
+void display();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE & DISPLAY A DOUBLY LINKED LIST\n\n");
+create();
+display();
+getch();
+}
+
+void create()
+{
+int n=1;
+printf("Enter The Values & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("No More Values Can Be Entered\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+			node1->prev=NULL;
+		}
+		else
+		{
+			node1->prev=last;
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+printf("End Of Linked List\n\n");
+}
+
+void display()
+{
+struct node *node1;
+printf("DISPLAY\nStart To Last\n");
+/*Displaying Linked List From Start To Last*/
+node1=start;
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+
+printf("\n\nLast To Start\n");
+/*Displaying Linked List From Last To Start*/
+node1=last;
+while (node1->prev!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->prev;
+}
+printf("%d",node1->data);
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I1">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q2)</U>	C PROGRAM TO INSERT A ELEMENT AT THE END OF THE DOUBLY LINKED LIST
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+struct node *prev;
+}*start=NULL, *last=NULL;
+
+void main()
+{
+void create();
+void display();
+void insert_end();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & INSERT A NODE AT THE END OF THE DOUBLY LINKED LIST\n\n");
+create();
+display();
+insert_end();
+getch();
+}
+
+void create()
+{
+int n=1;
+printf("Enter The Values & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("No More Values Can Be Entered\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+			node1->prev=NULL;
+		}
+		else
+		{
+			node1->prev=last;
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+printf("End Of Linked List\n\n");
+}
+
+void display()
+{
+struct node *node1;
+printf("DISPLAY\nStart To Last\n");
+node1=start;
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+printf("\n\nLast To Start\n");
+node1=last;
+while (node1->prev!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->prev;
+}
+printf("%d",node1->data);
+}
+
+void insert_end()
+{
+int n;
+struct node *new_node;
+printf("\n\nEnter The Value You Want To Insert ");
+scanf("%d",&n);
+new_node=(struct node*)malloc(sizeof(struct node));
+new_node->data=n;
+last->next=new_node;
+new_node->prev=last;
+last=last->next;
+printf("\n\n");
+display();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I2">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q3)</U>	C PROGRAM TO DELETE A ELEMENT AT THE END OF THE DOUBLY LINKED LIST
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+struct node *prev;
+}*start=NULL, *last=NULL;
+
+void main()
+{
+void create();
+void display();
+void delete_end();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & DELETE THE LAST NODE OF THE DOUBLY LINKED LIST\n\n");
+create();
+display();
+delete_end();
+getch();
+}
+
+void create()
+{
+int n=1;
+printf("Enter The Values & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("No More Values Can Be Entered\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+			node1->prev=NULL;
+		}
+		else
+		{
+			node1->prev=last;
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+printf("End Of Linked List\n\n");
+}
+
+void display()
+{
+struct node *node1;
+printf("DISPLAY\nStart To Last\n");
+node1=start;
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+printf("\n\nLast To Start\n");
+node1=last;
+while (node1->prev!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->prev;
+}
+printf("%d",node1->data);
+}
+
+void delete_end()
+{
+struct node *node1, *node2;
+printf("\n\nThe Last Node Of The Doubly Linked List Is Deleted\n");
+node1=start;
+while (node1->next!=NULL)
+{
+	node2=node1;
+	node1=node1->next;
+}
+node2->next=NULL;
+last=node2;
+free(node1);
+display();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I3">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q4)</U>	C PROGRAM TO DELETE A ELEMENT AND GET THE POSITION OF THAT ELEMENT IN THE DOUBLY LINKED LIST FROM THE USER
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+struct node *prev;
+}*start=NULL, *last=NULL;
+
+void main()
+{
+void create();
+void display();
+void delete_pos();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & DELETE A NODE FROM DOUBLY LINKED LIST & GET THE POSITION OF THAT NODE FROM THE USER\n\n");
+create();
+display();
+delete_pos();
+getch();
+}
+
+void create()
+{
+int n=1;
+printf("Enter The Value & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("No More Value Can Be Entered\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+			node1->prev=NULL;
+		}
+		else
+		{
+			node1->prev=last;
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+printf("End Of Linked List\n\n");
+}
+
+void display()
+{
+struct node *node1;
+printf("DISPLAY\nStart To Last\n");
+node1=start;
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+printf("\n\nLast To Start\n");
+node1=last;
+while (node1->prev!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->prev;
+}
+printf("%d",node1->data);
+}
+
+
+
+
+void delete_pos()
+{
+int pos;
+struct node *node1, *node2, *node3;
+printf("\n\nEnter The Position Of The Node Which You Want To Delete ");
+scanf("%d",&pos);
+printf("The Node Is Deleted\n");
+node1=start;
+while (pos>2)
+{
+	node1=node1->next;
+	pos--;
+}
+node2=node1->next;
+node3=node2->next;
+if (pos==1)
+{
+	start=start->next;
+	start->prev=NULL;
+	free(node1);
+}
+else if (pos==2)
+{
+	node1->next=node3;
+	node3->prev=node1;
+}
+display();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I4">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q5)</U>	C PROGRAM TO INSERT A ELEMENT AT THE MIDDLE OF THE DOUBLY LINKED LIST AT THE SPECIFIED PLACE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+struct node *prev;
+}*start=NULL, *last=NULL;
+
+void main()
+{
+void create();
+void display();
+void insert_mid();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & INSERT A NEW NODE IN THE MIDDLE OF DOUBLY LINKED LIST\n\n");
+create();
+display();
+insert_mid();
+getch();
+}
+
+void create()
+{
+int n=1;
+printf("Enter The Value & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("No More Value Can Be Entered\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+			node1->prev=NULL;
+		}
+		else
+		{
+			node1->prev=last;
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+printf("End Of Linked List\n\n");
+}
+
+void display()
+{
+struct node *node1;
+printf("DISPLAY\nStart To Last\n");
+node1=start;
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+printf("\n\nLast To Start\n");
+node1=last;
+while (node1->prev!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->prev;
+}
+printf("%d",node1->data);
+}
+
+
+
+
+void insert_mid()
+{
+int total=0,mid,n;
+struct node *node1, *new_node, *node2;
+printf("\n\nEnter The Value Of New Node ");
+scanf("%d",&n);
+printf("The Node In The Middle Of Doubly Linked List Is Deleted\n\n");
+
+node1=start;
+while (node1->data!=NULL)
+{
+	total++;
+	node1=node1->next;
+}
+mid=total/2;
+
+node1=start;
+while (mid>2)
+{
+	node1=node1->next;
+	mid--;
+}
+node2=node1->next;
+new_node=(struct node*)malloc(sizeof(struct node));
+new_node->data=n;
+if (mid==1)
+{
+	new_node->next=start;
+	start->prev=new_node;
+	start=new_node;
+}
+else if (mid==2)
+{
+	node1->next=new_node;
+	new_node->prev=node1;
+
+	new_node->next=node2;
+	node2->prev=new_node;
+}
+display();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I5">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q6)</U>	C PROGRAM TO INSERT A ELEMENT AND GET THE POSITION OF THAT ELEMENT IN THE DOUBLY LINKED LIST FROM THE USER
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+struct node *prev;
+}*start=NULL, *last=NULL;
+
+void main()
+{
+void create();
+void display();
+void insert_pos();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & INSERT A NODE IN THE DOUBLY LINKED LIST AT THE POSITION ENTERED BY THE USER\n\n");
+create();
+display();
+insert_pos();
+getch();
+}
+
+void create()
+{
+int n=1;
+printf("Enter The Value & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("No More Value Can Be Entered\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+			node1->prev=NULL;
+		}
+		else
+		{
+			node1->prev=last;
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+printf("End Of Linked List\n\n");
+}
+
+void display()
+{
+struct node *node1;
+printf("DISPLAY\nStart To Last\n");
+node1=start;
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+printf("\n\nLast To Start\n");
+node1=last;
+while (node1->prev!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->prev;
+}
+printf("%d",node1->data);
+}
+
+
+
+
+void insert_pos()
+{
+int pos,n;
+struct node *new_node, *node1, *node2;
+printf("\n\nEnter The Position Where You Want To Enter The New Node ");
+scanf("%d",&pos);
+printf("Enter The Value Of New Node ");
+scanf("%d",&n);
+
+node1=start;
+while (pos>2)
+{
+	node1=node1->next;
+	pos--;
+}
+node2=node1->next;
+new_node=(struct node*)malloc(sizeof(struct node));
+new_node->data=n;
+if (pos==1)
+{
+	new_node->next=start;
+	start->prev=new_node;
+	start=new_node;
+}
+else if (pos==2)
+{
+	node1->next=new_node;
+	new_node->prev=node1;
+
+	new_node->next=node2;
+	node2->prev=new_node;
+}
+display();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I6">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+
+
+</B>
+
+
+
+
+</BODY>
+</HTML>

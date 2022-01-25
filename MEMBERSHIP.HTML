@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>
+MEMBERSHIP
+</title>
+<script language="vbscript">
+dim a,b,d,e,f,g
+sub t1_onblur
+a=abc.t1.value
+if len(a)=8 then
+msgbox("Your ID is accepted")
+else
+msgbox("Your ID is wrong it should be of 8 charachters PLEASE RE-ENTER YOUR ID")
+end if
+end sub
+
+
+sub t2_onfocus
+b=abc.t2.value
+msgbox("Enter The Password Which You Want For The Security Of  Your ID")
+end sub
+
+sub t3_onblur
+f=abc.t3.value
+if len(f)=0 then
+msgbox("You can't leave any blank coloumn")
+else
+msgbox("Accepted")
+end if
+end sub
+
+sub t4_onblur
+d=abc.t4.value
+if len(d)=0 then
+msgbox("You can't leave any blank coloumn")
+else
+msgbox("Accepted")
+end if
+end sub
+
+sub t5_onblur
+e=abc.t5.value
+if len(e)=0 then
+msgbox("You can't leave any blank coloumn")
+else
+msgbox("Accepted")
+end if
+end sub
+
+sub t6_onblur
+f=abc.t6.value
+if len(f)=0 then
+msgbox("You can't leave any blank coloumn")
+else
+msgbox("Accepted")
+end if
+end sub
+
+sub t7_onblur
+g=abc.t7.value
+if len(g)=10 then
+msgbox("Your Phone No is accepted")
+else
+msgbox("Your Phone No should be of 10 charachters")
+end if
+end sub
+
+
+</script>
+</head>
+<body bgcolor="black" text="white">
+<h1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<center><b><u>MEMBERSHIP</b></u></center>
+</font>
+</h1>
+
+<FONT FACE="Lucida Handwriting">
+<form name="abc">
+<table cellpadding="5">
+<tr><td><b>USER ID:</b></td><td><input type="text" name="t1"></td></tr>
+<tr><td><b>PASSWORD:</b></td><td><input type="password" name="t2"></td></tr>
+<tr><td><b>COUNTRY:</b></td><td><select><option value="INDIA">INDIA<option value="PAKISTAN">PAKISTAN<option value="AUSTRALIA">AUSTRALIA<option value="NEW ZEALAND">NEW ZEALAND<option value="SRI LANKA">SRI LANKA<option value="DUBAI">DUBAI<option value="BRAZIL">BRAZIL<option value="HONG KONG">HONG KONG<option value="BRUSSELS">BRUSSELS<option value="KUWAIT">KUWAIT<option value="IRAQ">IRAQ</td></tr>
+<tr><td><b>STATE:</b></td><td><input type="text" name="t4"></td></tr>
+<tr><td><b>CITY:</b></td><td><input type="text" name="t5"></td></tr>
+<tr><td><b>ADDRESS:</b></td><td><input type="text" name="t6"></td></tr>
+<tr><td><b>PHONE NO:</b></td><td><input type="text" name="t7"></td></tr>
+<tr><td><b>E-MAIL ID:</b></td><td><input type="text" name="t3"></td></tr>
+<tr><td><b>GENDER:</b></td><td><b>MALE<input type="radio" name="r1">   FEMALE<input type="radio" name="r1"></b></td></tr>
+</table>
+<center>
+<table>
+<tr><th><font color="gold"><b><u>AGREEMENT</u></b></font></th></tr></br>
+<tr><td><b>If you want to be a member of this website than you have to follow some terms and condition:</b></td></tr></br>
+<tr><td><ul><b>
+<li>If you don't log in for 3 months your membership will be cancelled.
+<li>There will be a verification done for your information which you have given to us in the above form.
+</b></ul></td></tr>
+<tr><td><b>I Agree YES<input type="radio" name="r2"> NO<input type="radio" name="r2">
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="submit"></td></tr></table>
+</center>
+</form>
+</font>
+</body>
+</html>

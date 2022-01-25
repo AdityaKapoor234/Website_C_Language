@@ -1,0 +1,403 @@
+<HTML>
+<HEAD>
+<TITLE>
+NIELIT
+</TITLE>
+
+<SCRIPT LANGUAGE="VBSCRIPT">
+
+SUB I1_ONMOUSEOVER()
+	DOCUMENT.I1.SRC="OUTPUT2.JPG"
+END SUB
+SUB I1_ONMOUSEOUT()
+	DOCUMENT.I1.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I2_ONMOUSEOVER()
+	DOCUMENT.I2.SRC="OUTPUT2.JPG"
+END SUB
+SUB I2_ONMOUSEOUT()
+	DOCUMENT.I2.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I3_ONMOUSEOVER()
+	DOCUMENT.I3.SRC="OUTPUT2.JPG"
+END SUB
+SUB I3_ONMOUSEOUT()
+	DOCUMENT.I3.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I4_ONMOUSEOVER()
+	DOCUMENT.I4.SRC="OUTPUT2.JPG"
+END SUB
+SUB I4_ONMOUSEOUT()
+	DOCUMENT.I4.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I5_ONMOUSEOVER()
+	DOCUMENT.I5.SRC="OUTPUT2.JPG"
+END SUB
+SUB I5_ONMOUSEOUT()
+	DOCUMENT.I5.SRC="OUTPUT.JPG"
+END SUB
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="BLACK" TEXT="WHITE">
+
+<CENTER>
+<H1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<U><B>
+SWITCH CASE
+</B></U>
+</FONT>
+</H1>
+</CENTER>
+
+<B>
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q1)</U>	C PROGRAM TO DISPLAY THE NAME OF THE MONTH USING SWITCH CASE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a;
+clrscr();
+printf("this is a program to get the month the month name\nenter a no between 1 to 12\n");
+scanf("%d",&a);
+switch (a)
+{
+	case 1:
+	printf("jan");
+	break;
+	case 2:
+	printf("feb");
+	break;
+	case 3:
+	printf("march");
+	break;
+	case 4:
+	printf("april");
+	break;
+	case 5:
+	printf("may");
+	break;
+	case 6:
+	printf("june");
+	break;
+	case 7:
+	printf("jul");
+	break;
+	case 8:
+	printf("aug");
+	break;
+	case 9:
+	printf("sep");
+	break;
+	case 10:
+	printf("oct");
+	break;
+	case 11:
+	printf("nov");
+	break;	
+	case 12:
+	printf("dec");
+	break;
+	default:	
+	printf("invlid value");
+	break;
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="SWT1.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I1">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q2)</U>	C PROGRAM TO PRINT SEASON OF THE MONTH
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int a;
+clrscr();
+printf("THIS IS A PROGRAM TO FIND THE SEASON NAME BY ENTERING THE MONTH NUMBER(1-12)\n\nEnter the Month Number ");
+scanf("%d",&a);
+switch (a)
+{
+	case 1:
+	printf("Winter");
+	break;
+
+	case 2:
+	printf("Winter");
+	break;
+
+	case 3:
+	printf("Summer");
+	break;
+
+	case 4:
+	printf("Summer");
+	break;
+
+	case 5:
+	printf("Summer");
+	break;
+
+	case 6:
+	printf("Summer");
+	break;
+
+	case 7:
+	printf("Monsoon");
+	break;
+
+	case 8:
+	printf("Monsoon");
+	break;
+
+	case 9:
+	printf("Autum");
+	break;
+
+	case 10:
+	printf("Autum");
+	break;
+
+	case 11:
+	printf("Winter");
+	break;
+
+	case 12:
+	printf("Winter");
+	break;
+
+	default:
+	printf("Enter Valid Value");
+	break;
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="SWT2.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I2">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q3)</U>	C PROGRAM TO PERFORM ARITHMETIC OPERATIONS USING SWITCH CASE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a;
+int n1,n2,o;
+clrscr();
+printf("THIS IS A PROGRAM TO PERFORM A SPECIFIC ARITHMETIC OPERATION ON TWO NUMBERS\n\nEnter two Number with there Arithmetic Operation to be performed\nSyntax(2+3 or 2*4)\n");
+scanf("%d%c%d",&n1,&a,&n2);
+switch (a)
+{
+	case '+':
+	o=n1+n2;
+	printf("Your Sum is %d",o);
+	break;
+
+	case '-':
+	o=n1-n2;
+	printf("Your Substraction is %d",o);
+	break;
+
+	case '*':
+	o=n1*n2;
+	printf("Your Multiplication is %d",o);
+	break;
+
+	case '/':
+	o=n1/n2;
+	printf("Your Division is %d",o);
+	break;
+
+	default:
+	printf("Enter a Valid Arithmetic Operation");
+	break;
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="SWT3.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I3">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q4)</U>	C PROGRAM TO PRINT GIVEN CHARACTER IS A VOWEL
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a;
+clrscr();
+printf("THIS IS A PROGRAM TO FIND OUT THAT THE ENTERED CHARCHTER IS A VOWEL OR A CONSONENT\n\nEnter the Charachter ");
+scanf("%c",&a);
+switch (a)
+{
+	case 'a':
+	printf("Vowel");
+	break;
+	case 'A':
+	printf("Vowel");
+	break;
+	case 'e':
+	printf("Vowel");
+	break;
+	case 'E':
+	printf("Vowel");
+	break;
+	case 'i':
+	printf("Vowel");
+	break;
+	case 'I':
+	printf("Vowel");
+	break;
+	case 'o':
+	printf("Vowel");
+	break;
+	case 'O':
+	printf("Vowel");
+	break;
+	case 'u':
+	printf("Vowel");
+	break;
+	case 'U':
+	printf("Vowel");
+	break;
+	default:
+	printf("Consonent");
+	break;
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="SWT4.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I4">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q5)</U>	C PROGRAM THAT DISPLAYS THE RECOMMENDED ACTIONS DEPENDING ON THE COLOR OF A TRAFFIC LIGHT USING THE SWITCH STATEMENT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char l;
+clrscr();
+printf("THIS IS A PROGRAM TO SHOW THE RECOMMENDED ACTIONS DEPENDING ON THE COLOUR OF THE TRAFFIC LIGHT\n\nUse The Following Character For The Specific Colour Of Light:\nRed-R\nYellow-Y\nGreen-G\n\nEnter The Colour Of Light ");
+scanf("%c",&l);
+switch (l)
+{
+	case 'R':
+	printf("STOP");
+	break;
+
+	case 'r':
+	printf("STOP");
+	break;
+
+	case 'Y':
+	printf("WAIT");
+	break;
+
+	case 'y':
+	printf("WAIT");
+	break;
+
+	case 'G':
+	printf("GO");
+	break;
+
+	case 'g':
+	printf("GO");
+	break;
+
+	default:
+	printf("Enter Valid Value");
+	break;
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="SWT5.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I5">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+
+
+
+</B>
+
+
+
+</BODY>
+</HTML>

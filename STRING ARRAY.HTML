@@ -1,0 +1,525 @@
+<HTML>
+<HEAD>
+<TITLE>
+NIELIT
+</TITLE>
+
+<SCRIPT LANGUAGE="VBSCRIPT">
+
+SUB I1_ONMOUSEOVER()
+	DOCUMENT.I1.SRC="OUTPUT2.JPG"
+END SUB
+SUB I1_ONMOUSEOUT()
+	DOCUMENT.I1.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I2_ONMOUSEOVER()
+	DOCUMENT.I2.SRC="OUTPUT2.JPG"
+END SUB
+SUB I2_ONMOUSEOUT()
+	DOCUMENT.I2.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I3_ONMOUSEOVER()
+	DOCUMENT.I3.SRC="OUTPUT2.JPG"
+END SUB
+SUB I3_ONMOUSEOUT()
+	DOCUMENT.I3.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I4_ONMOUSEOVER()
+	DOCUMENT.I4.SRC="OUTPUT2.JPG"
+END SUB
+SUB I4_ONMOUSEOUT()
+	DOCUMENT.I4.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I5_ONMOUSEOVER()
+	DOCUMENT.I5.SRC="OUTPUT2.JPG"
+END SUB
+SUB I5_ONMOUSEOUT()
+	DOCUMENT.I5.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I6_ONMOUSEOVER()
+	DOCUMENT.I6.SRC="OUTPUT2.JPG"
+END SUB
+SUB I6_ONMOUSEOUT()
+	DOCUMENT.I6.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I7_ONMOUSEOVER()
+	DOCUMENT.I7.SRC="OUTPUT2.JPG"
+END SUB
+SUB I7_ONMOUSEOUT()
+	DOCUMENT.I7.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I8_ONMOUSEOVER()
+	DOCUMENT.I8.SRC="OUTPUT2.JPG"
+END SUB
+SUB I8_ONMOUSEOUT()
+	DOCUMENT.I8.SRC="OUTPUT.JPG"
+END SUB
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="BLACK" TEXT="WHITE">
+
+<CENTER>
+<H1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<U><B>
+STRING ARRAY
+</B></U>
+</FONT>
+</H1>
+</CENTER>
+
+<B>
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q1)</U>	C PROGRAM TO INPUT A STRING FROM THE USER AND THEN DISPLAY THE CHAR SEPERATELY
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[200];
+int i;
+clrscr();
+printf("THIS IS A PROGRAM TO ENTER THE VALUE IN A ARRAY & THEN DISPLAY THAT VALUE ONE-BY-ONE\n\nEnter the String ");
+gets(a);
+for (i=0 ; i < strlen(a) ; i++)
+{
+	printf("%c\n",a[i]);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARR1.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I1">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q2)</U>	C PROGRAM TO INPUT A STRING FROM THE USER
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[100];
+clrscr();
+printf("THIS IS A PROGRAM TO INPUT THE VALUE ENTERED FROM USER IN A STRIING\n\nEnter The Value ");
+gets(a);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARR2.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I2">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q3)</U>	C PROGRAM TO COUNT NUMBER OF WORDS IN A STRING
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+<U>1ST WAY</U>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[100];
+clrscr();
+printf("THIS IS A PROGRAM TO FIND OUT THE LENGTH OF THE STRING\n\nEnter the string ");
+gets(a);
+printf("The Length of the String is %d",strlen(a));
+getch();
+}
+
+<U>2nd WAY</U>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int n=0,i=0;
+char a[100];
+clrscr();
+printf("THIS IS A PROGRAM TO FIND OUT THE LENGTH OF THE STRING\n\nEnter the string ");
+gets(a);
+while (a[i]!='\0')
+{
+	n++;
+	i++;
+}
+printf("The Length of the String is %d",n);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARR3.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I3">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q4)</U>	C PROGRAM TO REMOVE ALL OCCURRENCE OF WORD “The” AND ”the” FROM AN INPUT STRING. FOR EXAMPLE:</BR></BR>
+INPUT: The Dhillon Theatre is now the Fun Republic.</BR>
+OUTPUT: Dhillon atre is now Fun Republic.</BR>
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int i,j,k,n,x,x2;
+char str[100];
+clrscr();
+printf("THIS IS A PROGRAM TO REMOVE THE OCCURRENCES OF \"The\" & \"the\" FROM THE INPUT STRING\n\nEnter The  Value Of String \n");
+/*scanning the value entered in string*/
+gets(str);
+n=strlen(str);
+
+/*removing the occurrences of "The" & "the"*/
+for (i=0 , j=1 , k=2 ;  k < n ; i++ , j++ , k++)
+{
+	if ((str[i]=='T' && str[j]=='h' && str[k]=='e') || (str[i]=='t' && str[j]=='h' && str[k]=='e'))
+	{
+		for (x=i , x2=(k+1) ;  x2 < n ; x++ , x2++)
+		{
+			str[x]=str[x2];
+		}
+		str[n-1]=NULL;
+		str[n-2]=NULL;
+		str[n-3]=NULL;
+	}
+}
+
+/*display the result*/
+printf("\n\nRESULT)\n");
+puts(str);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARR4.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I4">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q5)</U>	FUNCTION TO CALCULATE NUMBER OF VOWELS (a,e,i,o,u) SEPERATELY IN AN ENTERED STRING
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+#include < string.h >
+void main()
+{
+char s[100];
+int j,a=0,e=0,i=0,o=0,u=0;
+clrscr();
+printf("THIS IS A PROGRAM TO FIND OUT HOW MANY NUMEBER OF VOWELS ARE PRESENT IN THE STRING SEPERATELY\n\n");
+printf("Enter The String ");
+gets(s);
+for (j=0 ; j < strlen(s) ; j++)
+{
+	switch (s[j])
+	{
+		case 'a':
+		a++;
+		break;
+
+		case 'A':
+		a++;
+		break;
+
+		case 'e':
+		e++;
+		break;
+
+		case 'E':
+		e++;
+		break;
+
+		case 'i':
+		i++;
+		break;
+
+		case 'I':
+		i++;
+		break;
+
+		case 'o':
+		o++;
+		break;
+
+		case 'O':
+		o++;
+		break;
+
+		case 'u':
+		u++;
+		break;
+
+		case 'U':
+		u++;
+		break;
+	}
+}
+printf("\nNo. Of Vowels\n\nA:%d\nE:%d\nI:%d\nO:%d\nU:%d",a,e,i,o,u);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARR5.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I5">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q6)</U>	USING A SWITCH STATEMENT, WRITE A FUNCTION TO COUNT THE NUMBER OF VOWELS AND NUMBER OF BLANKS IN A CHARACTER ARRAY PASSED TO ITS AS AN ARGUMENT.
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char *ptr,a[100];
+void vowel(char *ptr);
+clrscr();
+printf("THIS IS A PROGRAM TO COUNT THE NO. OF VOWELS & BLANK SPACES IN THE STRING\n\nEnter The Value\n");
+gets(a);
+ptr=a;
+vowel(ptr);
+getch();
+}
+
+void vowel(char *ptr)
+{
+int i,vow=0,bl=0;
+for (i=0 ; i < strlen(ptr) ; i++)
+{
+	switch (*(ptr+i))
+	{
+		case 'a':
+		vow++;
+		break;
+
+		case 'A':
+		vow++;
+		break;
+
+		case 'e':
+		vow++;
+		break;
+
+		case 'E':
+		vow++;
+		break;
+
+		case 'i':
+		vow++;
+		break;
+
+		case 'I':
+		vow++;
+		break;
+
+		case 'o':
+		vow++;
+		break;
+
+		case 'O':
+		vow++;
+		break;
+
+		case 'u':
+		vow++;
+		break;
+
+		case 'U':
+		vow++;
+		break;
+
+		case ' ':
+		bl++;
+		break;
+
+		default:
+		break;
+	}
+}
+printf("\n\nNumber Of Vowels:\t%d\nNumber Of Blank Spaces:\t%d",vow,bl);
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARR6.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I6">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q7)</U>	C PROGRAM TO INPUT A STRING FROM THE USER, FIND THE STRING A PALINDROME OR NOT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[100],b[100];
+int i,n;
+clrscr();
+printf("THIS IS A PROGRAM TO FIND OUT WHEATHER THE ENTERED STRING IS A PALINDROM OR NOT\n\nEnter the String ");
+gets(a);
+strcpy(b,a);
+strrev(a);
+n=strcmp(a,b);
+if (n==0)
+{
+	printf("Its is a Palindrom");
+}
+else
+{
+	printf("It is a Not Palindrom");
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARR7.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I7">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q8)</U>	FUNCTION char* stuff(char* s1,char* s2,int sp, int rp) TO STUFF STRING s2 IN STRING s1 AT POSITION sp, REPLACING RP NUMBER OF CHARACTERS (rp MAY BE ZERO).
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int sp,rp;
+char *s1, *s2;
+void stuff(char *s1,char *s2,int sp,int rp);
+clrscr();
+printf("THIS IS A PROGRAM TO STUFF SOME CHARACTER OF SECOND STRING IN FIRST STRING STARTING FROM A SPECIFIED POSITION\n\nEnter First String ");
+gets(s1);
+printf("\nEnter Second String ");
+gets(s2);
+printf("\nEnter The Position Where You Want To Enter The Some Specific Character Of First String ");
+scanf("%d",&sp);
+printf("\nEnter How Many Character Of Second String You Want To Enter In The First String ");
+scanf("%d",&rp);
+stuff(s1,s2,sp,rp);
+getch();
+}
+
+void stuff(char *s1,char *s2,int sp,int rp)
+{
+int i,j,ch;
+char str[100];
+ch=sp+rp;
+
+/*entering the values of first string(s1) into a new string(str)*/
+for (i=sp , j=0 ; i < strlen(s1) ; i++ , j++)
+	str[j]=s1[i];
+str[j]='\0';
+
+
+/*shifting the values of first string(s1) from a specific place to some place ahead*/
+for (i=ch , j=0 ; j < strlen(str) ; i++ , j++)
+	s1[i]=str[j];
+
+/*entering some values of second string into first string*/
+for (i=sp , j=0 ; i < ch , j < rp ; i++ , j++)
+	s1[i]=s2[j];
+printf("\n\nAns) %s",s1);
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARR8.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I8">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+
+
+
+
+
+</B>
+
+</BODY>
+</HTML>

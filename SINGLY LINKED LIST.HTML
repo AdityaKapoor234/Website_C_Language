@@ -1,0 +1,1145 @@
+<HTML>
+<HEAD>
+<TITLE>
+NIELIT
+</TITLE>
+
+<SCRIPT LANGUAGE="VBSCRIPT">
+
+SUB I1_ONMOUSEOVER()
+	DOCUMENT.I1.SRC="OUTPUT2.JPG"
+END SUB
+SUB I1_ONMOUSEOUT()
+	DOCUMENT.I1.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I2_ONMOUSEOVER()
+	DOCUMENT.I2.SRC="OUTPUT2.JPG"
+END SUB
+SUB I2_ONMOUSEOUT()
+	DOCUMENT.I2.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I3_ONMOUSEOVER()
+	DOCUMENT.I3.SRC="OUTPUT2.JPG"
+END SUB
+SUB I3_ONMOUSEOUT()
+	DOCUMENT.I3.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I4_ONMOUSEOVER()
+	DOCUMENT.I4.SRC="OUTPUT2.JPG"
+END SUB
+SUB I4_ONMOUSEOUT()
+	DOCUMENT.I4.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I5_ONMOUSEOVER()
+	DOCUMENT.I5.SRC="OUTPUT2.JPG"
+END SUB
+SUB I5_ONMOUSEOUT()
+	DOCUMENT.I5.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I6_ONMOUSEOVER()
+	DOCUMENT.I6.SRC="OUTPUT2.JPG"
+END SUB
+SUB I6_ONMOUSEOUT()
+	DOCUMENT.I6.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I7_ONMOUSEOVER()
+	DOCUMENT.I7.SRC="OUTPUT2.JPG"
+END SUB
+SUB I7_ONMOUSEOUT()
+	DOCUMENT.I7.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I8_ONMOUSEOVER()
+	DOCUMENT.I8.SRC="OUTPUT2.JPG"
+END SUB
+SUB I8_ONMOUSEOUT()
+	DOCUMENT.I8.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I9_ONMOUSEOVER()
+	DOCUMENT.I9.SRC="OUTPUT2.JPG"
+END SUB
+SUB I9_ONMOUSEOUT()
+	DOCUMENT.I9.SRC="OUTPUT.JPG"
+END SUB
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="BLACK" TEXT="WHITE">
+
+<CENTER>
+<H1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<U><B>
+SINGLY LINKED LIST
+</B></U>
+</FONT>
+</H1>
+</CENTER>
+
+<B>
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q1)</U>	C PROGRAM TO CREATE A LINKED LIST FOR INTEGER DATA TYPE AND THEN DISPLAY THE VALUES OF LINKED ELEMENTS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+}*start=NULL,*last=NULL;
+
+void main()
+{
+char ch;
+void create();
+void display();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE A LINKED LIST\n\nDo You Want To Create A Linked List ");
+scanf("%c",&ch);
+//calling different functions for creating and displaying the linked list
+if (ch=='y' || ch=='Y')
+{
+	create();
+	display();
+}
+getch();
+}
+
+void create()
+{
+int n=1;
+//function to create a linked list
+printf("Enter Numbers & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("End Of List\n\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+		}
+		else
+		{
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+}
+
+void display()
+{
+//function for diplaying or printing the values present in the linked list
+struct node *node1;
+node1=start;
+printf("LINKED LIST\n");
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I1">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q2)</U>	C PROGRAM TO INSERT A ELEMENT AT THE END OF THE LIST
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+}*start=NULL,*last=NULL;
+
+void main()
+{
+void create();
+void display();
+void insert();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE A LINK LIST\n\n");
+create();
+display();
+insert();
+display();
+getch();
+}
+
+void create()
+{
+int n=1;
+//function to create a linked list
+printf("Enter Numbers & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("End Of List\n\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+		}
+		else
+		{
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+}
+
+void display()
+{
+struct node *node1;
+//function to display the linked list
+node1=start;
+printf("LINKED LIST\n");
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+}
+
+void insert()
+{
+int n;
+struct node *new_node;
+//function to insert the new node in the linked list
+new_node=(struct node*)malloc(sizeof(struct node));
+printf("\n\nEnter The Value Of New Node Which Is Going To Be Inserted At The Last ");
+scanf("%d",&n);
+new_node->data=n;
+new_node->next=NULL;
+last->next=new_node;
+last=last->next;
+printf("\nAFTER INSERTION ");
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I2">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q3)</U>	C PROGRAM TO DELETE A ELEMENT AT THE END OF THE LIST
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+}*start=NULL,*last=NULL;
+
+void main()
+{
+char ch;
+void create();
+void display();
+void delet();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE A LINKED LIST\n\n");
+create();
+display();
+printf("\n\nDo You Want To Delete The Last Node ");
+ch=getche();
+if (ch=='y' || ch=='Y')
+{
+	delet();
+	display();
+}
+getch();
+}
+void create()
+{
+int n=1;
+printf("Enter Numbers & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("End Of List\n\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+		}
+		else
+		{
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+}
+
+void display()
+{
+struct node *node1;
+node1=start;
+printf("LINK LIST\n");
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+}
+
+void delet()
+{
+struct node *node1, *node3;
+node1=start;
+while (node1->next!=NULL)
+{
+	node3=node1;
+	node1=node1->next;
+}
+node3->next=NULL;
+last=node3;
+free(node1);
+printf("\nAFTER DELETING THE LAST NODE ");
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I3">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q4)</U>	C PROGRAM TO DELETE A ELEMENT AND GET THE POSITION OF THAT ELEMENT IN THE LIST FROM THE USER
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+}*start=NULL,*last=NULL;
+
+void main()
+{
+int pos;
+char ch;
+void create();
+void delet(int pos);
+void display();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE A LINKED LIST\n\nDo You Want To Create A Linked List ");
+scanf("%c",&ch);
+//calling different functions for creating, displaying and deleting(a specific node) the linked list
+if (ch=='y' || ch=='Y')
+{
+	create();
+	display();
+}
+if (ch=='y' || ch=='Y')
+{
+	printf("\n\nEnter The No. Of Node You Want To Delete ");
+	scanf("%d",&pos);
+	delet(pos);
+	display();
+}
+getch();
+}
+
+void create()
+{
+int n=1;
+//function to create a linked list
+printf("Enter Numbers & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("End Of List\n\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+		}
+		else
+		{
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+}
+
+void display()
+{
+//function for diplaying or printing the values present in the linked list
+struct node *node1;
+node1=start;
+printf("LINKED LIST\n");
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+}
+
+void delet(int pos)
+{
+int i;
+struct node *node1, *fn;
+struct node *node2, *node3;
+//function for deleting a node in linked list
+node1=start;
+while (pos>2)
+{
+	node1=node1->next;
+	pos--;
+}
+fn=start;
+if (pos==1)
+{
+	start=start->next;
+	free(fn);
+}
+else if (pos==2)
+{
+	node2=node1->next;
+	node3=node2->next;
+	node1->next=node3;
+	free(node2);
+}
+printf("After Deleting The Node ");
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I4">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q5)</U>	C PROGRAM TO INSERT A ELEMENT AT THE MIDDLE OF THE LIST AT THE SPECIFIED PLACE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+}*start=NULL,*last=NULL;
+
+void main()
+{
+void create();
+void display();
+void insert();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE AND DISPLAY THE LINKED LIST\n\n");
+create();
+display();
+insert();
+display();
+getch();
+}
+
+void create()
+{
+int n=1;
+
+printf("Enter Numbers & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("End Of Linked List\n\n");
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+		}
+		else
+		{
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+}
+
+
+void display()
+{
+struct node *node1;
+node1=start;
+printf("LINK LIST\n");
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+}
+
+void insert()
+{
+int i=0,mid,n;
+struct node *node1,*new_node,*node3;
+node1=start;
+while (node1->data!=NULL)
+{
+	i++;
+	node1=node1->next;
+}
+mid=i/2;
+node1=start;
+while (mid>2)
+{
+	node1=node1->next;
+	mid--;
+}
+printf("\n\nEnter The Value Of New Node Which Will Be Inserted In The Middle Of Linked List ");
+scanf("%d",&n);
+node3=node1->next;
+if (mid==1)
+{
+	new_node=(struct node*)malloc(sizeof(struct node));
+	new_node->data=n;
+	new_node->next=start;
+	start=new_node;
+}
+else if (mid==2)
+{
+	new_node=(struct node*)malloc(sizeof(struct node));
+	node1->next=new_node;
+	new_node->data=n;
+	new_node->next=node3;
+}
+printf("\nAFTER INSRTION ");
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I5">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q6)</U>	C PROGRAM TO INSERT A ELEMENT AND GET THE POSITION OF THAT ELEMENT IN THE LIST FROM THE USER
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+}*start=NULL,*last=NULL;
+
+void main()
+{
+int pos;
+char ch;
+void create();
+void insert(int pos);
+void display();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE A LINKED LIST\n\nDo You Want To Create A Linked List ");
+scanf("%c",&ch);
+//calling different functions for creating and displaying the linked list
+if (ch=='y' || ch=='Y')
+{
+	create();
+	display();
+	printf("\n\nEnter The Position Where You Want To Insert The New Node ");
+	scanf("%d",&pos);
+	insert(pos);
+	display();
+}
+getch();
+}
+
+void create()
+{
+int n=1;
+//function to create a linked list
+printf("Enter Numbers & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("End Of List\n\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+		}
+		else
+		{
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+}
+
+void display()
+{
+//function for diplaying or printing the values present in the linked list
+struct node *node1;
+node1=start;
+printf("LINKED LIST\n");
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+}
+
+void insert(int pos)
+{
+int n;
+struct node *node1, *node2, *node3;
+//function to insert a new node in linked list
+node1=start;
+while (pos>2)
+{
+	node1=node1->next;
+	pos--;
+}
+printf("Enter The Value Of New Node ");
+scanf("%d",&n);
+node3=node1->next;
+if (pos==1)
+{
+	node2=(struct node*)malloc(sizeof(struct node));
+	node2->data=n;
+	node2->next=start;
+	start=node2;
+}
+else if (pos==2)
+{
+	node2=(struct node*)malloc(sizeof(struct node));
+	node1->next=node2;
+	node2->data=n;
+	node2->next=node3;
+}
+printf("\nAfter Inserting The New Node ");
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I6">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q7)</U>	C PROGRAM WHICH ASKS THE USER TO ENTER THE NAME AND AGE OF PERSONS IN HIS GROUP. THE NUMBER OF PERSONS IS NOT KNOWN TO THE USER IN THE BEGINNING OF THE PROGRAM. THE USER KEEPS ON ENTERING THE DATA TILL THE USER ENTERS AGE AS ZERO. THE PROGRAM FINALLY PRINTS THE AVERAGE AGE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+char na[100];
+struct node *next;
+}*start=NULL,*last=NULL;
+
+void main()
+{
+void create();
+void average();
+void display();
+clrscr();
+printf("THIS IS A PROGRAM TO INPUT THE NAME AND AGE OF PERSONS AND SHOW THE AVERAGE AGE\nNOTE:The Program Won't Be Terminated Till The User Enter The Age As 0\n");
+create();
+average();
+display();
+getch();
+}
+
+
+void create()
+{
+int n=1;
+char name[100];
+struct node *node1;
+while (n!=0)
+{
+	printf("\nEnter Your Name ");
+	scanf("%s",name);
+	printf("Enter Your Age ");
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("The Program Will Not Enter Any More Info Of Other Peoples\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		strcpy(node1->na,name);
+		node1->data=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+		}
+		else
+		{
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+}
+
+void average()
+{
+int i=0,sum=0;
+double avg;
+struct node *node1;
+node1=start;
+while (node1->data!=NULL)
+{
+	sum+=node1->data;
+	i++;
+	node1=node1->next;
+}
+avg=(double)sum/i;
+printf("\nAVERAGE AGE:\t%.2lf",avg);
+}
+
+void display()
+{
+struct node *node1;
+node1=start;
+printf("\n\nDISPLAY\n\n");
+while (node1->next!=NULL)
+{
+	printf("%s:\t\t%d\n",node1->na,node1->data);
+	node1=node1->next;
+}
+printf("%s:\t\t%d",node1->na,node1->data);
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I7">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q8)</U>	C PROGRAM TO CREATE A LINKED LIST. THERE SHOULD BE 20 NODES IN THE LIST; EACH NODE CONTAINS AN INTEGER BETWEEN 1-20. THE LIST SHOULD BE PRINTED AT THE END
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int data;
+struct node *next;
+}*start=NULL,*last=NULL;
+
+void main()
+{
+void create();
+void display();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE AND DISPLAY THE LINKED LIST WHICH HAVE ONLY 20 NODES EACH NODE CAN STORE VALUE BETWEEN 1-20\n\n");
+create();
+display();
+getch();
+}
+
+void create()
+{
+int n,i;
+struct node *node1;
+printf("Enter 20 Values\n");
+
+for (i=1;i<=20;i++)
+{
+	scanf("%d",&n);
+	here:
+	if (!(n>=1 && n<=20))
+	{
+		printf("Each Node Can Accept Value Only Between 1-20\nEnter Correct Value\n");
+		scanf("%d",&n);
+		goto here;
+	}
+	node1=(struct node*)malloc(sizeof(struct node));
+	node1->data=n;
+	node1->next=NULL;
+	if (start==NULL)
+	{
+		start=node1;
+		last=node1;
+	}
+	else
+	{
+		last->next=node1;
+		last=last->next;
+	}
+}
+}
+
+void display()
+{
+int i;
+struct node *node1;
+node1=start;
+printf("\nDISPLAY\n");
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->data);
+	node1=node1->next;
+}
+printf("%d",node1->data);
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I8">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q9)</U>	
+<OL>
+<LI>DEFINE A STRUCTURE OF A NODE OF A LINKED LIST HAVING AN INTEGER DATA MEMBER X.
+<LI>USE THE ABOVE STRUCTURE IN (1) AND WRITE THE FUNCTIONS FOR THE              FOLLOWING PARTS:
+	<OL TYPE="A">
+	<LI>A FUNCTION WHICH TAKES A POINTER TO THE HEAD OF LINKED LIST, WHICH IS IN ASCENDING ORDER AND AN INTEGER, X TO BE INSERTED IN THE LINKED LIST, AS ARGUMENTS. THE NODE MUST BE INSERTED IN SUCH A WAY THAT THE LINKED LIST REMAINS IN ASCENDING ORDER AFTER INSERTION
+	<LI>A FUNCTION WHICH TAKES A POINTER TO THE HEAD OF A LINKED LIST AND AN INTEGER, X TO BE REMOVED FROM THE LINKED LIST, AS ARGUMENTS. IF X IS NOT FOUND IN THE LINKED LIST, THEN IT SHOULD DISPLAY AN APPROPRIATE MESSAGE.
+	</OL>
+</OL>
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct node
+{
+int x;
+struct node *next;
+}*start=NULL,*last=NULL;
+
+void main()
+{
+int d;
+void create();
+void display();
+void insert(int d);
+void delete_node(int d);
+struct node *node1;
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY, INSERT & DELETE A NODE IN LINKED LIST\n\n");
+create();
+display();
+
+/*calling a function to insert a node in linked list in ascending order*/
+printf("\n\nEnter The Value You Want To Insert ");
+scanf("%d",&d);
+insert(d);
+
+/*calling a function to delete a specific value in linked list*/
+printf("\n\nEnter The Value Of Node You Want To Delete ");
+scanf("%d",&d);
+delete_node(d);
+getch();
+}
+
+void create()
+{
+int n=1;
+printf("Enter The Values & Enter 0 To Exit\n");
+while (n!=0)
+{
+	scanf("%d",&n);
+	if (n==0)
+	{
+		printf("No More Value Can Be Entered\n");
+		break;
+	}
+	else
+	{
+		struct node *node1;
+		node1=(struct node*)malloc(sizeof(struct node));
+		node1->x=n;
+		node1->next=NULL;
+		if (start==NULL)
+		{
+			start=node1;
+			last=node1;
+		}
+		else
+		{
+			last->next=node1;
+			last=last->next;
+		}
+	}
+}
+printf("End Of Linked List\n\n");
+}
+
+void display()
+{
+struct node *node1;
+node1=start;
+printf("LINKED LIST\n");
+while (node1->next!=NULL)
+{
+	printf("%d-->",node1->x);
+	node1=node1->next;
+}
+printf("%d",node1->x);
+}
+
+void insert(int d)
+{
+struct node *node1, *node2, *node3, *new_node;
+node1=start;
+if (d<node1->x)
+{
+	new_node->next=start;
+	start=new_node;
+}
+while (d>node1->x)
+{
+	node2=node1;
+	node1=node1->next;
+}
+new_node=(struct node*)malloc(sizeof(struct node));
+new_node->x=d;
+node2->next=new_node;
+new_node->next=node1;
+display();
+}
+
+void delete_node(int d)
+{
+struct node *node1,*node2,*node3;
+
+/*checking wheather the value entered by user is present in the linked list or not*/
+node1=start;
+while (node1->x!=NULL)
+{
+	if (d==node1->x)
+	{
+		goto here;
+	}
+	node1=node1->next;
+}
+printf("The Value You Entered Is not Present In The Linked List");
+getch();
+exit(0);
+here:
+
+/*deleting the occurrance of the value entered by user*/
+node1=start;
+if (d==start->x)
+{
+	start=start->next;
+	free(node1);
+	node1=start;
+	while (node1->x!=NULL)
+	{
+		node2=node1->next;
+		node3=node2->next;
+		if (d==node2->x)
+			node1->next=node3;
+
+		if (d!=node2->x)
+			node1=node1->next;
+		else
+			free(node2);
+	}
+}
+else
+{
+	while (node1->x!=NULL)
+	{
+		node2=node1->next;
+		node3=node2->next;
+		if (d==node2->x)
+			node1->next=node3;
+
+		if (d!=node2->x)
+			node1=node1->next;
+		else
+			free(node2);
+	}
+}
+display();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF=".EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I9">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+
+</B>
+
+
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,653 @@
+<HTML>
+<HEAD>
+<TITLE>
+NIELIT
+</TITLE>
+
+<SCRIPT LANGUAGE="VBSCRIPT">
+
+SUB I1_ONMOUSEOVER()
+	DOCUMENT.I1.SRC="OUTPUT2.JPG"
+END SUB
+SUB I1_ONMOUSEOUT()
+	DOCUMENT.I1.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I2_ONMOUSEOVER()
+	DOCUMENT.I2.SRC="OUTPUT2.JPG"
+END SUB
+SUB I2_ONMOUSEOUT()
+	DOCUMENT.I2.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I3_ONMOUSEOVER()
+	DOCUMENT.I3.SRC="OUTPUT2.JPG"
+END SUB
+SUB I3_ONMOUSEOUT()
+	DOCUMENT.I3.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I4_ONMOUSEOVER()
+	DOCUMENT.I4.SRC="OUTPUT2.JPG"
+END SUB
+SUB I4_ONMOUSEOUT()
+	DOCUMENT.I4.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I5_ONMOUSEOVER()
+	DOCUMENT.I5.SRC="OUTPUT2.JPG"
+END SUB
+SUB I5_ONMOUSEOUT()
+	DOCUMENT.I5.SRC="OUTPUT.JPG"
+END SUB
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="BLACK" TEXT="WHITE">
+
+<CENTER>
+<H1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<U><B>
+CIRCULAR QUEUE
+</B></U>
+</FONT>
+</H1>
+</CENTER>
+
+<B>
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q1)</U>	C PROGRAM TO CREATE A CIRCULAR QUEUE FOR INTEGER DATA TYPE AND THEN DISPLAY THE VALUES OF CIRCULAR QUEUE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct cir_queue
+{
+int a[10];
+int front;
+int rear;
+}q;
+
+void main()
+{
+void create();
+void display();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE AND DISPLAY CIRCULAR QUEUE\n\n");
+create();
+display();
+getch();
+}
+
+void create()
+{
+int n;
+q.front=-1;
+q.rear=-1;
+printf("Enter The Values & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (q.front==-1)
+	{
+		q.front++;
+		q.rear++;
+		q.a[q.front]=n;
+	}
+	else if (q.rear==9 && q.front!=0)
+	{
+		q.rear=0;
+		q.a[q.rear]=n;
+	}
+	else if (q.rear!=9)
+	{
+		q.rear++;
+		q.a[q.rear]=n;
+	}
+	else
+	{
+		printf("Cannot Add More Elements\n");
+		break;
+	}
+	if ((q.front!=q.rear+1) && !(q.front==0 && q.rear==9))
+		scanf("%d",&n);
+}
+printf("End Of Queue\n\n");
+}
+
+void display()
+{
+int i;
+printf("DISPLAY\n");
+for (i=q.front ; i<=q.rear ; i++)
+{
+	printf("%d\t",q.a[i]);
+	if ((q.front!=0) && i==9)
+		i=0;
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="CIRQUE_C.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I1">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q2)</U>	C PROGRAM TO ENQUEUE (INSERT) A ELEMENT IN CIRCULAR QUEUE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct cir_queue
+{
+int a[10];
+int front;
+int rear;
+}q;
+
+void main()
+{
+void create();
+void display();
+void enqueue();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & INSERT AN ELEMENT IN CIRCULAR QUEUE\n\n");
+create();
+display();
+enqueue();
+getch();
+}
+
+void create()
+{
+int n;
+q.front=-1;
+q.rear=-1;
+printf("Enter The Values & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (q.front==-1)
+	{
+		q.front++;
+		q.rear++;
+		q.a[q.front]=n;
+	}
+	else if (q.rear==9 && q.front!=0)
+	{
+		q.rear=0;
+		q.a[q.rear]=n;
+	}
+	else if (q.rear!=9)
+	{
+		q.rear++;
+		q.a[q.rear]=n;
+	}
+	else
+	{
+		printf("No More Elements Can Be Entered\n");
+		break;
+	}
+	if ((q.rear!=q.front-1) && !(q.front==0 && q.rear==9))
+		scanf("%d",&n);
+}
+printf("END\n\n");
+}
+
+void display()
+{
+int i;
+printf("DISPLAY\n");
+for (i=q.front ; i<=q.rear ; i++)
+{
+	printf("%d\t",q.a[i]);
+	if ((q.rear==9) && (q.front!=0))
+		q.rear=0;
+}
+printf("\n\n");
+}
+
+void enqueue()
+{
+int n;
+if ((q.rear==q.front-1) || (q.front==0 && q.rear==9))
+{
+	printf("The Circular Queue Is Already Full\nNo Element Can Be Entered");
+}
+else
+{
+	printf("Enter The Value Of New Element ");
+	scanf("%d",&n);
+	if ((q.front!=0) && (q.rear==9))
+	{
+		q.rear=0;
+		q.a[q.rear]=n;
+	}
+	else
+	{
+		q.rear++;
+		q.a[q.rear]=n;
+	}
+	display();
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="CIRQUE_E.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I2">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q3)</U>	C PROGRAM TO DEQUEUE (DELETE) A ELEMENT OF CIRCULAR QUEUE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct cir_queue
+{
+int a[10];
+int front;
+int rear;
+}q;
+
+void main()
+{
+void create();
+void display();
+void dequeue();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & ENQUEUE(DELETE) A ELEMENT FROM CIRCULAR QUEUE\n\n");
+create();
+display();
+dequeue();
+getch();
+}
+
+void create()
+{
+int n;
+q.front=-1;
+q.rear=-1;
+printf("Enter The Values & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (q.front==-1)
+	{
+		q.front++;
+		q.rear++;
+		q.a[q.front]=n;
+	}
+	else if (q.front!=0 && q.rear==9)
+	{
+		q.rear=0;
+		q.a[q.rear]=n;
+	}
+	else if (q.rear!=9)
+	{
+		q.rear++;
+		q.a[q.rear]=n;
+	}
+	else
+	{
+		printf("No More Element Can Be Entered\n");
+		break;
+	}
+	if ((q.rear!=q.front-1) && !(q.front==0 && q.rear==9))
+		scanf("%d",&n);
+}
+printf("END\n\n");
+}
+
+void display()
+{
+int i;
+printf("DISPLAY\n");
+for (i=q.front ; i<=q.rear ; i++)
+{
+	printf("%d\t",q.a[i]);
+	if (q.front!=0 && i==9)
+		q.rear=0;
+}
+printf("\n\n");
+}
+
+void dequeue()
+{
+printf("DEQUEUE\n");
+if (q.front>=0)
+{
+	q.front++;
+	display();
+}
+else
+{
+	printf("Queue Is Empty");
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="CIRQUE_D.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I3">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q4)</U>	C PROGRAM TO CHECK WHEATHER THE CIRCULAR QUEUE IS EMPTY OR NOT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct cir_queue
+{
+int a[10];
+int front;
+int rear;
+}q;
+
+void main()
+{
+void create();
+void display();
+void is_empty();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & CHECK WHEATHER THE CIRCULAR QUEUE IS EMPTY OR NOT\n\n");
+create();
+display();
+is_empty();
+getch();
+}
+
+void create()
+{
+int n;
+q.front=-1;
+q.rear=-1;
+printf("Enter The Values & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (q.front==-1)
+	{
+		q.front++;
+		q.rear++;
+		q.a[q.front]=n;
+	}
+	else if (q.rear==9 && q.front!=0)
+	{
+		q.rear=0;
+		q.a[q.rear]=n;
+	}
+	else if (q.rear!=9)
+	{
+		q.rear++;
+		q.a[q.rear]=n;
+	}
+	else
+	{
+		printf("Cannot Add More Elements\n");
+		break;
+	}
+	if ((q.front!=q.rear+1) && !(q.front==0 && q.rear==9))
+		scanf("%d",&n);
+}
+printf("End Of Queue\n\n");
+}
+
+void display()
+{
+int i;
+printf("DISPLAY\n");
+for (i=q.front ; i<=q.rear ; i++)
+{
+	printf("%d\t",q.a[i]);
+	if ((q.front!=0) && i==9)
+		i=0;
+}
+printf("\n\n");
+}
+
+void is_empty()
+{
+printf("EMPTY OR NOT\n");
+if (q.front>=0)
+{
+	printf("Queue Is Not Empty");
+}
+else
+{
+	printf("Queue Is Empty");
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="CIRQUEEM.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I4">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q5)</U>	C PROGRAM TO CREATE A MENU TO PERFORM VARIOUS OPERATIONS ON CIRCULAR QUEUE LIKE:-</BR></BR>
+<OL>
+<LI>CREATE
+<LI>DISPLAY
+<LI>ENQUEUE
+<LI>DEQUEUE
+<LI>CHECK WHEATHER IT IS EMPTY OR NOT
+</OL>
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct queue
+{
+int a[10];
+int front;
+int rear;
+}q;
+
+void main()
+{
+int n=1;
+void create();
+void display();
+void enqueue();
+void dequeue();
+void is_empty();
+clrscr();
+printf("THIS IS A PROGRAM TO MAKE A CIRCULAR QUEUE & PERFORM OPERATIONS ON IT\nNOTE:PROGRAM WILL NOT END TILL THE USER ENTER HIS\HER \"QUEUE OPERATIONS\" CHOICE  AS 0\n\n");
+printf("\nCircular Queue Operations\n1. Create\n2. Display\n3. Enqueue\n4. Dequeue\n5. Is_Empty\n");
+while (!(n==1 && n==2 && n==3 && n==4 && n==5))
+{
+	printf("\nEnter Your Choice ");
+	scanf("%d",&n);
+	switch (n)
+	{
+		case 1:
+		create();
+		break;
+
+		case 2:
+		display();
+		break;
+
+		case 3:
+		enqueue();
+		break;
+
+		case 4:
+		dequeue();
+		break;
+
+		case 5:
+		is_empty();
+		break;
+
+		default:
+		getch();
+		exit(0);
+		break;
+	}
+}
+getch();
+}
+
+void create()
+{
+int n;
+q.front=-1;
+q.rear=-1;
+printf("Enter The Values & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (q.front==-1)
+	{
+		q.front++;
+		q.rear++;
+		q.a[q.front]=n;
+	}
+	else if (q.rear==9 && q.front!=0)
+	{
+		q.rear=0;
+		q.a[q.rear]=n;
+	}
+	else if (q.rear!=9)
+	{
+		q.rear++;
+		q.a[q.rear]=n;
+	}
+	else
+	{
+		printf("Cannot Add More Elements\n");
+		break;
+	}
+	if ((q.front!=q.rear+1) && !(q.front==0 && q.rear==9))
+		scanf("%d",&n);
+}
+printf("End Of Queue\n\n");
+}
+
+void display()
+{
+int i;
+printf("DISPLAY\n");
+for (i=q.front ; i<=q.rear ; i++)
+{
+	printf("%d\t",q.a[i]);
+	if ((q.front!=0) && i==9)
+		i=0;
+}
+printf("\n\n");
+}
+
+void enqueue()
+{
+int n;
+if ((q.rear==q.front-1) || (q.front==0 && q.rear==9))
+{
+	printf("The Circular Queue Is Already Full\nNo Element Can Be Entered\n\n");
+}
+else
+{
+	printf("Enter The Value Of New Element ");
+	scanf("%d",&n);
+	if ((q.front!=0) && (q.rear==9))
+	{
+		q.rear=0;
+		q.a[q.rear]=n;
+	}
+	else
+	{
+		q.rear++;
+		q.a[q.rear]=n;
+	}
+}
+}
+
+void dequeue()
+{
+printf("DEQUEUE\n");
+if (q.front>=0)
+{
+	q.front++;
+}
+else
+{
+	printf("Queue Is Empty\n\n");
+}
+}
+
+void is_empty()
+{
+printf("EMPTY OR NOT\n");
+if (q.front>=0)
+{
+	printf("Queue Is Not Empty\n\n");
+}
+else
+{
+	printf("Queue Is Empty\n\n");
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="CIRQUEUE.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I5">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+
+
+
+</B>
+
+
+
+</BODY>
+</HTML>

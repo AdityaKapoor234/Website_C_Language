@@ -1,0 +1,403 @@
+<HTML>
+<HEAD>
+<TITLE>
+NIELIT
+</TITLE>
+
+<SCRIPT LANGUAGE="VBSCRIPT">
+
+SUB I1_ONMOUSEOVER()
+	DOCUMENT.I1.SRC="OUTPUT2.JPG"
+END SUB
+SUB I1_ONMOUSEOUT()
+	DOCUMENT.I1.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I2_ONMOUSEOVER()
+	DOCUMENT.I2.SRC="OUTPUT2.JPG"
+END SUB
+SUB I2_ONMOUSEOUT()
+	DOCUMENT.I2.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I3_ONMOUSEOVER()
+	DOCUMENT.I3.SRC="OUTPUT2.JPG"
+END SUB
+SUB I3_ONMOUSEOUT()
+	DOCUMENT.I3.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I4_ONMOUSEOVER()
+	DOCUMENT.I4.SRC="OUTPUT2.JPG"
+END SUB
+SUB I4_ONMOUSEOUT()
+	DOCUMENT.I4.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I5_ONMOUSEOVER()
+	DOCUMENT.I5.SRC="OUTPUT2.JPG"
+END SUB
+SUB I5_ONMOUSEOUT()
+	DOCUMENT.I5.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I6_ONMOUSEOVER()
+	DOCUMENT.I6.SRC="OUTPUT2.JPG"
+END SUB
+SUB I6_ONMOUSEOUT()
+	DOCUMENT.I6.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I7_ONMOUSEOVER()
+	DOCUMENT.I7.SRC="OUTPUT2.JPG"
+END SUB
+SUB I7_ONMOUSEOUT()
+	DOCUMENT.I7.SRC="OUTPUT.JPG"
+END SUB
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="BLACK" TEXT="WHITE">
+
+<CENTER>
+<H1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<U><B>
+STRING ARRAY FUNCTIONS
+</B></U>
+</FONT>
+</H1>
+</CENTER>
+
+<B>
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q1)</U>	C PROGRAM TO FIND OUT THE LENGTH OF STRING WITHOUT USING STRING FUNCTIONS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+int n=0,i=0;
+char a[100];
+clrscr();
+printf("THIS IS A PROGRAM TO FIND OUT THE LENGTH OF THE STRING\n\nEnter the string ");
+gets(a);
+while (a[i]!='\0')
+{
+	n++;
+	i++;
+}
+printf("The Length of the String is %d",n);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARRFUNC1.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I1">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q2)</U>	C PROGRAM TO CONCATENATE TWO STRING WITHOUT USING STRING FUNCTIONS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[100],b[100];
+int i,a_len=0,b_len=0,c,j;
+clrscr();
+printf("THIS IS A PROGRAM TO CONCATENATE TWO DIFFERENT VARIABLES\n\nEnter Your First Name ");
+gets(a);
+printf("Enter Your Last Name ");
+gets(b);
+/*calculating the length of first string(a)*/
+for (i=0;a[i]!='\0';i++)
+	a_len++;
+
+/*calculating the length of second string(a)*/
+for (i=0;b[i]!='\0';i++)
+	b_len++;
+
+/*calculating the total length of first string(a) after concatenation*/
+c=a_len+b_len;
+
+/*concatenating the value of second string into first string*/
+for (i=a_len , j=0 ; i < c , j < b_len ; i++ , j++)
+	a[i]=b[j];
+
+printf("\nYour Concatenated Value is %s %s",a);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARRFUNC2.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I2">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q3)</U>	C PROGRAM TO COPY THE VALUE OF ONE STRING TO ANOTHER WITHOUT USING STRING FUNCTION
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[100],b[100];
+int i;
+clrscr();
+printf("THIS IS A PROGRAM TO COPY THE STRING\n\nEnter the String in Variable a ");
+gets(a);
+for (i=0;i<=100;i++)
+{
+	b[i]=a[i];
+}
+printf("Your Value is Copied into Variable b And Your Value is %s",b);
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARRFUNC3.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I3">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q4)</U>	C PROGRAM TO COMPARE THE VALUE OF ONE STRING TO ANOTHER WITHOUT USING STRING FUNCTION AND SHOW THE RESULT WHEATHER THE VALUE OF BOTH THE STRING ARE SAME OR NOT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[100],b[100];
+int i,n,j=0,len=0;
+clrscr();
+printf("THIS IS A PROGRAM TO COMPARE  TWO VARIABLES\n\nEnter Value in First String ");
+gets(a);
+printf("Enter Value in Second String ");
+gets(b);
+while (a[j]!='\0')
+{
+	len++;
+	j++;
+}
+for (i=0 ; i < len ; i++)
+{
+	if (a[i] != b[i])
+	{
+		printf("The Values in Both the Variable are not Equal");
+		getch();
+		exit(0);
+	}
+}
+printf("The Values in Both the Variable are Equal");
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARRFUNC4.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I4">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q5)</U>	C PROGRAM TO CONVERT ALL THE ALPHABET WRITTEN IN LOWER CASE TO UPPER CASE IN A STRING WITHOUT USING STRING FUNCTION
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[100];
+int i,j=0,n=0;
+clrscr();
+printf("THIS IS A PROGRAM TO CONVERT THE LOWWER CASE CHARACTERS TO UPPER CASE\n\nEnter String ");
+gets(a);
+while (a[j]!='\0')
+{
+	n++;
+	j++;
+}
+for (i=0 ; i < n ; i++)
+{
+	if (a[i]>=97 && a[i]<=122)
+		printf("%c",a[i]-32);
+	else
+		printf("%c",a[i]);
+}
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARRFUNC5.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I5">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q6)</U>	C PROGRAM TO CONVERT ALL THE ALPHABET WRITTEN IN UPPER CASE TO LOWER CASE IN A STRING WITHOUT USING STRING FUNCTION
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[100];
+int i,j=0,n=0;
+clrscr();
+printf("THIS IS A PROGRAM TO CONVERT ALL THE UPPER CASE CHARACTER TO LOWER CASE\n\nEnter String ");
+gets(a);
+while (a[j]!='\0')
+{
+	n++;
+	j++;
+}
+for (i=0 ; i < n ; i++)
+{
+	if (a[i]>=65 && a[i]<=90)
+		printf("%c",a[i]+32);
+	else
+		printf("%c",a[i]);
+}
+getch();
+} 
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARRFUNC6.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I6">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q7)</U>	C PROGRAM TO INPUT A STRING FROM THE USER, FIND THE STRING A PALINDROME OR NOT WITHOUT USING STRING FUNCTIONS
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+<U>1ST WAY</U>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[100];
+int i,j,n,len=0;
+clrscr();
+printf("PALINDROM\n\nEnter a Word ");
+gets(a);
+n=0;
+while (a[n]!='\0')
+{
+	len++;
+	n++;
+}
+for (i=len-1 , j=0 ; i>=0 , j < len ; i-- , j++)
+{
+	if (a[j]!=a[i])
+	{
+		printf("Not A Palindrome");
+		getch();
+		exit(0);
+	}
+}
+printf("It's a Palindrom");
+getch();
+} 
+
+<U>2ND WAY</U>
+#include < stdio.h >
+#include < conio.h >
+void main()
+{
+char a[100];
+int i,j;
+clrscr();
+printf("PALINDROM\n\nEnter a Word ");
+gets(a);
+for (i=strlen(a)-1 , j=0 ; i>=0 , j < strlen(a) ; i-- , j++)
+{
+	if (a[j]!=a[i])
+	{
+		printf("Not a Palindrom");
+		getch();
+		exit(0);
+	}
+}
+printf("It's a Palindrom");
+getch();
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="STRARRFUNC7.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I7">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+
+
+
+</B>
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,644 @@
+<HTML>
+<HEAD>
+<TITLE>
+NIELIT
+</TITLE>
+
+<SCRIPT LANGUAGE="VBSCRIPT">
+
+SUB I1_ONMOUSEOVER()
+	DOCUMENT.I1.SRC="OUTPUT2.JPG"
+END SUB
+SUB I1_ONMOUSEOUT()
+	DOCUMENT.I1.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I2_ONMOUSEOVER()
+	DOCUMENT.I2.SRC="OUTPUT2.JPG"
+END SUB
+SUB I2_ONMOUSEOUT()
+	DOCUMENT.I2.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I3_ONMOUSEOVER()
+	DOCUMENT.I3.SRC="OUTPUT2.JPG"
+END SUB
+SUB I3_ONMOUSEOUT()
+	DOCUMENT.I3.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I4_ONMOUSEOVER()
+	DOCUMENT.I4.SRC="OUTPUT2.JPG"
+END SUB
+SUB I4_ONMOUSEOUT()
+	DOCUMENT.I4.SRC="OUTPUT.JPG"
+END SUB
+
+SUB I5_ONMOUSEOVER()
+	DOCUMENT.I5.SRC="OUTPUT2.JPG"
+END SUB
+SUB I5_ONMOUSEOUT()
+	DOCUMENT.I5.SRC="OUTPUT.JPG"
+END SUB
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="BLACK" TEXT="WHITE">
+
+<CENTER>
+<H1>
+<FONT COLOR="RED" FACE="MISTRAL" SIZE="6">
+<U><B>
+QUEUE
+</B></U>
+</FONT>
+</H1>
+</CENTER>
+
+<B>
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q1)</U>	C PROGRAM TO CREATE A QUEUE FOR INTEGER DATA TYPE AND THEN DISPLAY THE VALUES OF QUEUE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct queue
+{
+int a[10];
+int front;
+int real;
+}q;
+
+void main()
+{
+void create();
+void display();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE & DISPLAY QUEUE\n\n");
+create();
+display();
+getch();
+}
+
+void create()
+{
+int n;
+q.front=-1;
+q.real=-1;
+printf("Enter The Values Of Queue & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if  (q.front==-1)
+	{
+		q.front++;
+		q.real++;
+		q.a[q.front]=n;
+	}
+	else
+	{
+		if (q.real==9)
+		{
+			printf("Queue Is Full\n\n");
+			break;
+		}
+		else
+		{
+			q.real++;
+			q.a[q.real]=n;
+		}
+	}
+	if (q.real<9)
+		scanf("%d",&n);
+	if (n==0)
+		printf("END\n\n");
+}
+}
+
+void display()
+{
+int i;
+printf("QUEUE\n");
+if (q.front==-1)
+	printf("EMPTY");
+else
+{
+	for (i=q.front ; i<=q.real ; i++)
+		printf("%d\t",q.a[i]);
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="QUEUE1.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I1">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q2)</U>	C PROGRAM TO ENQUEUE (INSERT) A ELEMENT IN QUEUE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct queue
+{
+int a[10];
+int front;
+int real;
+}q;
+
+void main()
+{
+void create();
+void display();
+void enqueue();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & ENQUEUE(INSERT) A ELEMENT IN QUEUE\n\n");
+create();
+display();
+enqueue();
+getch();
+}
+
+void create()
+{
+int n;
+q.front=-1;
+q.real=-1;
+printf("Enter Values Of Queue & Enter 0 To Exit\n");
+scanf("%d",&n);
+
+while (n!=0)
+{
+	if (q.front==-1)
+	{
+		q.front++;
+		q.real++;
+		q.a[q.front]=n;
+	}
+	else
+	{
+		if (q.real==9)
+		{
+			printf("Queue Is Full");
+			break;
+		}
+		else
+		{
+			q.real++;
+			q.a[q.real]=n;
+		}
+	}
+	if (q.real<9)
+		scanf("%d",&n);
+	if (n==0)
+		printf("END");
+}
+printf("\n\n");
+}
+
+void display()
+{
+int i;
+printf("QUEUE\n");
+if (q.front==-1)
+	printf("EMPTY");
+else
+	for (i=q.front ; i<=q.real ; i++)
+		printf("%d\t",q.a[i]);
+printf("\n\n");
+}
+
+void enqueue()
+{
+int n;
+printf("ENQUEUE\n");
+if (q.real==9)
+	printf("Queue Is Already Full No Space To Enqueue(Insert) An Element\n");
+else if (q.front==-1)
+{
+	q.front++;
+	q.real++;
+	printf("Enter The Value Of New Element Of Queue ");
+	scanf("%d",&n);
+	q.a[q.front]=n;
+	printf("\n\n");
+	display();
+}
+else
+{
+	q.real++;
+	printf("Enter The Value Of New Element Of Queue ");
+	scanf("%d",&n);
+	q.a[q.real]=n;
+	printf("\n\n");
+	display();
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="QUEUE2.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I2">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q3)</U>	C PROGRAM TO DEQUEUE (DELETE) A ELEMENT OF QUEUE
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct queue
+{
+int a[10];
+int front;
+int real;
+}q;
+
+void main()
+{
+void create();
+void display();
+void dequeue();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & DEQUEUE(DELETE) A ELEMENT FROM QUEUE\n\n");
+create();
+display();
+dequeue();
+getch();
+}
+
+void create()
+{
+int n;
+q.front=-1;
+q.real=-1;
+printf("Enter The Values Of Queue & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (q.front==-1)
+	{
+		q.front++;
+		q.real++;
+		q.a[q.front]=n;
+	}
+	else
+	{
+		if (q.real==9)
+		{
+			printf("Queue Is Full");
+			break;
+		}
+		else
+		{
+			q.real++;
+			q.a[q.real]=n;
+		}
+	}
+	if (q.real<9)
+		scanf("%d",&n);
+	if (n==0)
+		printf("END");
+}
+printf("\n\n");
+}
+
+void display()
+{
+int i;
+printf("QUEUE\n");
+if (q.front==-1)
+	printf("EMPTY");
+else
+	for (i=q.front ; i<=q.real ; i++)
+		printf("%d\t",q.a[i]);
+printf("\n\n");
+}
+
+void dequeue()
+{
+if (q.front==-1)
+	printf("Queue Is Empty No Element To Dequeue(Delete)");
+else
+{
+	printf("Element To Dequeue(Delete) Is %d",q.a[q.front]);
+	q.front++;
+	printf("\n\n");
+	display();
+}
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="QUEUE3.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I3">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q4)</U>	C PROGRAM TO CHECK WHEATHER THE QUEUE IS EMPTY OR NOT
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct queue
+{
+int a[10];
+int front;
+int real;
+}q;
+
+void main()
+{
+void create();
+void display();
+void is_empty();
+clrscr();
+printf("THIS IS A PROGRAM TO CREATE, DISPLAY & CHECK WHEATHER QUEUE IS EMPTY OR NOT\n\n");
+create();
+display();
+is_empty();
+getch();
+}
+
+void create()
+{
+int n;
+q.front=-1;
+q.real=-1;
+printf("Enter The Values Of Queue & Enter 0 To Exit\n");
+scanf("%d",&n);
+
+while (n!=0)
+{
+	if (q.front==-1)
+	{
+		q.front++;
+		q.real++;
+		q.a[q.front]=n;
+	}
+	else
+	{
+		if (q.real==9)
+		{
+			printf("Queue Is Full");
+			break;
+		}
+		else
+		{
+			q.real++;
+			q.a[q.real]=n;
+		}
+	}
+	if (q.real<9)
+		scanf("%d",&n);
+	if (n==0)
+		printf("END");
+}
+printf("\n\n");
+}
+
+void display()
+{
+int i;
+printf("QUEUE\n");
+if (q.front==-1)
+	printf("Queue Is Empty");
+else
+	for (i=q.front ; i<=q.real ; i++)
+		printf("%d\t",q.a[i]);
+printf("\n\n");
+}
+
+void is_empty()
+{
+printf("Queue Is Empty Or Not\n");
+if (q.front==-1)
+	printf("Queue Is Empty");
+else
+	printf("Queue Is Not Empty");
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="QUEUE4.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I4">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+<FONT COLOR="LIGHTBLUE" SIZE="5" FACE="CHILLER">
+<U>Q5)</U>	C PROGRAM TO CREATE A MENU TO PERFORM VARIOUS OPERATIONS ON QUEUE LIKE:-</BR></BR>
+<OL>
+<LI>CREATE
+<LI>DISPLAY
+<LI>ENQUEUE
+<LI>DEQUEUE
+<LI>CHECK WHEATHER IT IS EMPTY OR NOT
+</OL>
+</BR>
+<U>ANS)</U>
+</FONT>
+<FONT SIZE="4">
+<PRE>
+#include < stdio.h >
+#include < conio.h >
+struct queue
+{
+int a[10];
+int front;
+int real;
+}q;
+
+void main()
+{
+int n=1;
+void create();
+void display();
+void enqueue();
+void dequeue();
+void is_empty();
+clrscr();
+printf("THIS IS A PROGRAM TO MAKE A QUEUE & PERFORM OPERATIONS ON IT\nNOTE:PROGRAM WILL NOT END TILL THE USER ENTER HIS\HER \"QUEUE OPERATIONS\" CHOICE  AS 0\n\n");
+printf("\nQueue Operations\n1. Create\n2. Display\n3. Enqueue\n4. Dequeue\n5. Is_Empty\n");
+while (!(n==1 && n==2 && n==3 && n==4 && n==5))
+{
+	printf("\nEnter Your Choice ");
+	scanf("%d",&n);
+	switch (n)
+	{
+		case 1:
+		create();
+		break;
+
+		case 2:
+		display();
+		break;
+
+		case 3:
+		enqueue();
+		break;
+
+		case 4:
+		dequeue();
+		break;
+
+		case 5:
+		is_empty();
+		break;
+
+		default:
+		getch();
+		exit(0);
+		break;
+	}
+}
+getch();
+}
+
+void create()
+{
+int n;
+q.front=-1;
+q.real=-1;
+printf("\t\t\t\tCREATE\nEnter The Elements Of Queue & Enter 0 To Exit\n");
+scanf("%d",&n);
+while (n!=0)
+{
+	if (q.front==-1)
+	{
+		q.front++;
+		q.real++;
+		q.a[q.front]=n;
+	}
+	else
+	{
+		if (q.real==9)
+		{
+			printf("Capacity Of Queue Is Full");
+			break;
+		}
+		else
+		{
+			q.real++;
+			q.a[q.real]=n;
+		}
+	}
+	if (q.real<9)
+		scanf("%d",&n);
+	if (n==0)
+		printf("End");
+}
+printf("\n\n");
+}
+
+void display()
+{
+int i;
+printf("\t\t\t\tDISPLAY\n");
+if (q.front==-1)
+	printf("EMPTY");
+else
+	for (i=q.front ; i<=q.real ; i++)
+		printf("%d\t",q.a[i]);
+printf("\n\n");
+}
+
+void enqueue()
+{
+int n;
+printf("\t\t\t\tENQUEUE\n");
+if (q.real==9)
+	printf("Queue Is Already Full No Space To Enqueue(Insert) An Element");
+else if (q.front==-1)
+{
+	q.front++;
+	q.real++;
+	printf("Enter The Value Of New Element Of Queue ");
+	scanf("%d",&n);
+	q.a[q.front]=n;
+}
+else
+{
+	q.real++;
+	printf("Enter The Value Of New Element Of Queue ");
+	scanf("%d",&n);
+	q.a[q.real]=n;
+}
+printf("\n\n");
+}
+
+void dequeue()
+{
+printf("\t\t\t\tDEQUEUE\n");
+if (q.front==-1)
+	printf("EMPTY\n\n");
+else
+{
+	printf("Element To Dequeue Is %d",q.a[q.front]);
+	q.front++;
+	printf("\n\n");
+}
+}
+
+void is_empty()
+{
+printf("\t\t\t\tIS EMPTY\n");
+if (q.front==-1)
+	printf("Queue Is Empty\n\n");
+else
+	printf("Queue Is Not Empty\n\n");
+}
+</PRE>
+</FONT>
+<CENTER>
+<A HREF="QUEUE5.EXE">
+<IMG SRC="OUTPUT.JPG" HEIGHT="40" WIDTH="150" NAME="I5">
+</A>
+</CENTER>
+<HR WIDTH="80%" SIZE="4" COLOR="BROWN">
+</BR>
+</BR>
+
+
+
+</B>
+
+
+
+
+
+</BODY>
+</HTML>
